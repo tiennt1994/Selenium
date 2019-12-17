@@ -13,9 +13,10 @@ public class TodoMVCTest {
         todoPage.createNewTodo("to do 1");
         todoPage.createNewTodo("to do 2");
         todoPage.createNewTodo("to do 3");
+        todoPage.createNewTodo("to do 4");
 
         //todoPage.editTodoName("to do 2","to do moi");
 
-        todoPage.deleteTodo("to do 3");
+        todoPage.deleteTodo("to do 4");
     }
 }
