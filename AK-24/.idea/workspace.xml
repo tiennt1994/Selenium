@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="692246a2-2f3a-48e4-b3e2-5a8afeee3c11" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="AK-24" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1TgO3gVDfCeCgJDnrgdw3KI0hkE" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/selenium-java-project-day_4" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tien\IdeaProjects\AK-24\driver" />
+      <recent name="C:\Users\Tien\IdeaProjects\AK-24" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tien\IdeaProjects\AK-24\driver" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="crossbrowser" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.TodoMVCTest">
+    <configuration name="BasicAuth" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="modules.crossbrowser.BasicAuth" />
+      <module name="AK-24" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="supports.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Table" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="modules.crossbrowser.Table" />
+      <module name="AK-24" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="supports.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="modules.crossbrowser.Test" />
+      <module name="AK-24" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="supports.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoMVC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="modules.TodoMVC" />
+      <module name="AK-24" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="supports.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoMVCTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="modules.TodoMVCTest" />
+      <module name="AK-24" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modules.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.BasicAuth" />
+      <item itemvalue="Application.Table" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.TodoMVC" />
+      <item itemvalue="Application.TodoMVCTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TodoMVCTest" />
+        <item itemvalue="Application.TodoMVC" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Table" />
+        <item itemvalue="Application.BasicAuth" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="692246a2-2f3a-48e4-b3e2-5a8afeee3c11" name="Default Changelist" comment="" />
+      <created>1573878075262</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573878075262</updated>
+      <workItem from="1573878087513" duration="1594000" />
+      <workItem from="1574058891444" duration="294000" />
+      <workItem from="1574145535914" duration="407000" />
+      <workItem from="1574304651068" duration="1434000" />
+      <workItem from="1574474718775" duration="9238000" />
+      <workItem from="1574484187673" duration="286000" />
+      <workItem from="1574676677150" duration="1898000" />
+      <workItem from="1574678898175" duration="728000" />
+      <workItem from="1574740631827" duration="5844000" />
+      <workItem from="1574752119884" duration="3452000" />
+      <workItem from="1574755613202" duration="6935000" />
+      <workItem from="1574840013546" duration="13000" />
+      <workItem from="1574840612541" duration="4154000" />
+      <workItem from="1574845302294" duration="10000" />
+      <workItem from="1575079694182" duration="9994000" />
+      <workItem from="1575097721797" duration="5198000" />
+      <workItem from="1575108094092" duration="1122000" />
+      <workItem from="1575684354418" duration="9401000" />
+      <workItem from="1576030711621" duration="1271000" />
+      <workItem from="1576032146800" duration="2741000" />
+      <workItem from="1576132549138" duration="8606000" />
+      <workItem from="1576203220638" duration="688000" />
+      <workItem from="1576207204313" duration="901000" />
+      <workItem from="1576208666943" duration="2556000" />
+      <workItem from="1576223058769" duration="3555000" />
+      <workItem from="1576288862998" duration="10834000" />
+      <workItem from="1576477354939" duration="7908000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
