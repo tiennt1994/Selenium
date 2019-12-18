@@ -1,4 +1,4 @@
-package modules;
+package modules.Example;
 import libraries.TodoFunctions;
 import org.apache.http.util.Asserts;
 import org.openqa.selenium.support.How;

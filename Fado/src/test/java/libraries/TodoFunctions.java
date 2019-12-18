@@ -44,10 +44,10 @@ public class TodoFunctions {
     }
     public boolean isTodoExisted (String taskName){
         String todo = String.format("//label[.='%s']",taskName);
-        if (Browser.findall(How.XPATH, todo).size()>0) return true;
+        if (Browser.findAll(How.XPATH, todo).size()>0) return true;
         else return false;
     }
     public List<WebElement> getTodo(String taskName){
-        return Browser.findall(How.XPATH,String.format("//label[.='%s']", taskName));
+        return Browser.findAll(How.XPATH,String.format("//label[.='%s']", taskName));
     }
 }

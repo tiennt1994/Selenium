@@ -1,4 +1,4 @@
-package modules;
+package modules.Example;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.How;

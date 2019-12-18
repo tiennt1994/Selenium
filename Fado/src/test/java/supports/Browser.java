@@ -96,7 +96,7 @@ public class Browser {
         return find(how, locator).getText();
     }
 
-    public static List<WebElement> findall(How how, String locator) {
+    public static List<WebElement> findAll(How how, String locator) {
         return driver.findElements(how.buildBy(locator));
     }
 

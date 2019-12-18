@@ -1,4 +1,4 @@
-package modules;
+package modules.Example;
 
 import supports.Browser;
 

@@ -1,4 +1,4 @@
-package modules;
+package modules.Fado;
 
 import libraries.Functions;
 import org.openqa.selenium.WebElement;
@@ -12,11 +12,13 @@ public class LoginTest {
         logInWrongPassword();
         //logInWrongEmail();
     }
-    public static void logInSuccess () {
-        Functions.login("tiennt@miczone.vn","tien2653084");
+    public static void logInSuccess () throws InterruptedException {
+        Functions test = new Functions();
+        test.login("tiennt@miczone.vn","tien2653084");
     }
     public static void logInNull () throws InterruptedException {
-        Functions.login("","");
+        Functions test = new Functions();
+        test.login("","");
         WebElement message1 = Browser.find(How.ID,"email-error");
         WebElement message2 = Browser.find(How.ID, "password-error");
         //message.isDisplayed();
@@ -26,7 +28,8 @@ public class LoginTest {
         else System.out.println("fail");
     }
     public static void logInWrongPassword () throws InterruptedException {
-        Functions.login("tiennt@miczone.vn","123456");
+        Functions test = new Functions();
+        test.login("tiennt@miczone.vn","123456");
         WebElement error_message = Browser.find(How.XPATH,"//div[@class='my-alert -alert-danger']");
         if (error_message.getText().trim().equals("Có lỗi xảy ra:\n" +
                 "- Mật khẩu không đúng, vui lòng kiểm tra lại")){
@@ -35,7 +38,8 @@ public class LoginTest {
         else System.out.println("fail");
     }
     public static void logInWrongEmail () throws InterruptedException {
-        Functions.login("tiennt1@miczone.vn","tien2653084");
+        Functions test = new Functions();
+        test.login("tiennt1@miczone.vn","tien2653084");
         WebElement error_message = Browser.find(How.XPATH,"//b[@class='font--size-lg']");
         if (error_message.getText().trim().equals("Có lỗi xảy ra:")){
             System.out.println("pass");
