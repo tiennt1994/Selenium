@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="692246a2-2f3a-48e4-b3e2-5a8afeee3c11" name="Default Changelist" comment="" />
+    <list default="true" id="692246a2-2f3a-48e4-b3e2-5a8afeee3c11" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +40,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Fado" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -188,7 +190,8 @@
       <workItem from="1576223058769" duration="3555000" />
       <workItem from="1576288862998" duration="10834000" />
       <workItem from="1576477354939" duration="7908000" />
-      <workItem from="1576553935564" duration="2011000" />
+      <workItem from="1576553935564" duration="3007000" />
+      <workItem from="1576639209290" duration="73000" />
     </task>
     <servers />
   </component>
@@ -200,7 +203,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
