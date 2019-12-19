@@ -57,10 +57,12 @@ public class TodoFunctions {
         }
         else System.out.println("ko co " + taskName);
     }
-    public List<WebElement> showAll (){
-        String todo = String.format("//div[@class='view']//label");
-
-        Browser.findAll(How.XPATH,todo).get
-
+    public void showAll (){
+        Browser.find(How.XPATH,"//a[.='All']").click();
+        List<WebElement> todo = Browser.findAll(How.XPATH,"//div[@class='view']//label");
+        System.out.println("Tong so todo: "+todo.size());
+        for (int i=0; i < todo.size();i++){
+            System.out.println(todo.get(i).getText());
+        }
     }
 }

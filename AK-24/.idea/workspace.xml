@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/libraries/TodoFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/libraries/TodoFunctions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/modules/TodoMVCTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/TodoMVCTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/supports/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/supports/Browser.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -196,6 +195,7 @@
       <workItem from="1576553935564" duration="3007000" />
       <workItem from="1576639209290" duration="73000" />
       <workItem from="1576671186704" duration="2551000" />
+      <workItem from="1576733975855" duration="2677000" />
     </task>
     <servers />
   </component>

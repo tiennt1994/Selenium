@@ -17,6 +17,7 @@ public class TodoMVCTest {
         //todoPage.editTodoName("to do 2","to do moi");
         todoPage.deleteTodo("to do 4");
         todoPage.markDone("to do 1");
+        todoPage.showAll();
 
     }
 }
