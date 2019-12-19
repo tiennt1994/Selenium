@@ -44,10 +44,23 @@ public class TodoFunctions {
     }
     public boolean isTodoExisted (String taskName){
         String todo = String.format("//label[.='%s']",taskName);
-        if (Browser.findall(How.XPATH, todo).size()>0) return true;
+        if (Browser.findAll(How.XPATH, todo).size()>0) return true;
         else return false;
     }
     public List<WebElement> getTodo(String taskName){
-        return Browser.findall(How.XPATH,String.format("//label[.='%s']", taskName));
+        return Browser.findAll(How.XPATH,String.format("//label[.='%s']", taskName));
+    }
+    public void markDone (String taskName) {
+        String todo = String.format("//label[.='%s']",taskName);
+        if (isTodoExisted(taskName)) {
+            Browser.find(How.XPATH,todo + "//..//input").click();
+        }
+        else System.out.println("ko co " + taskName);
+    }
+    public List<WebElement> showAll (){
+        String todo = String.format("//div[@class='view']//label");
+
+        Browser.findAll(How.XPATH,todo).get
+
     }
 }
