@@ -15,9 +15,37 @@ public class Functions {
         Thread.sleep(2000);
     }
 
-    public boolean checkSearch (){
-
-        if (Browser.findAll(How.XPATH, "//*[@class='search-result-block']/div//div[contains(text(),'Không tìm thấy sản phẩm')]").size()>0) return true;
+    public boolean isExisted (String x){
+        if (Browser.findAll(How.XPATH, x).size()>0) {
+            return true;
+        }
         else return false;
+    }
+
+    public void search (String link, String keyWord) throws InterruptedException {
+        Browser.open("chrome");
+        Browser.get(link);
+        // click icon close banner quang cao
+        if (isExisted("//*[@class='close']")){
+            Browser.find(How.XPATH,"//*[@class='close']").click();
+        }
+        Browser.fill(How.CLASS_NAME,"mz-header-vsearch__keyword-input",keyWord);
+        Browser.find(How.XPATH,"//i[@class='fal fa-search']").click();
+        Thread.sleep(3000);
+    }
+
+    public boolean checkSearch (String country) {
+        switch (country) {
+            case "us":
+                return Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0;
+            case "jp":
+                return Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[2]//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0;
+            case "de":
+                return Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[3]//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0;
+            case "uk":
+                return Browser.findAll(How.XPATH, "//*[@class='search-result-layout']//div//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0;
+            default:
+                throw new IllegalStateException("country ko dung: " + country);
+        }
     }
 }

@@ -1,5 +1,6 @@
 package supports;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -33,9 +34,11 @@ public class Browser {
                 driver = new EdgeDriver();
                 break;
             case "chrome":
+                WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 break;
             case "firefox":
+                WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
                 break;
             case "safari":
@@ -78,9 +81,16 @@ public class Browser {
     public static WebElement find(How how, String locator) {
         return driver.findElement(how.buildBy(locator));
     }
+    public static WebElement find(By locator) {
+        return driver.findElement(locator);
+    }
     public static void fill(How how, String locator,String withText){
         find(how, locator).clear();
         find(how, locator).sendKeys(withText);
+    }
+    public static void fill(By locator,String withText){
+        find(locator).clear();
+        find(locator).sendKeys(withText);
     }
     public static void check(How how, String locator){
         if(!find(how, locator).isSelected()){
@@ -95,19 +105,33 @@ public class Browser {
     public static String getText(How how, String locator) {
         return find(how, locator).getText();
     }
+    public static String getText(By locator){
+        return find(locator).getText();
+    }
 
     public static List<WebElement> findAll(How how, String locator) {
         return driver.findElements(how.buildBy(locator));
+    }
+    public static List<WebElement> findAll(By locator){
+        return driver.findElements(locator);
     }
 
     public static void doubleClick(How how, String locator){
         Actions dbClick = new Actions(driver);
         dbClick.doubleClick(find(how, locator)).perform();
     }
+    public static void doubleClick(By locator){
+        Actions dbClick = new Actions(driver);
+        dbClick.doubleClick(find(locator)).perform();
+    }
 
     public static void hover(How how, String locator){
         Actions hover = new Actions(driver);
         hover.moveToElement(find(how, locator)).perform();
+    }
+    public static void hover(By locator){
+        Actions hover = new Actions(driver);
+        hover.moveToElement(find(locator)).perform();
     }
 
     public static void captureScreenshot(){

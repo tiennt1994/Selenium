@@ -9,6 +9,5 @@ public class chrome {
         //System.setProperty("webdriver.chrome.driver","driver/chromedriver.exe");
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-
     }
 }

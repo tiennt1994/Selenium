@@ -2,9 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="692246a2-2f3a-48e4-b3e2-5a8afeee3c11" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_72.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_7_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/configuration/mvc-test.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/objects/TodoObjects.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fado/.idea/libraries/Maven__com_beust_jcommander_1_72.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fado/.idea/libraries/Maven__org_testng_testng_7_0_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AK-24.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AK-24.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/driver/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/driver/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/libraries/TodoFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/libraries/TodoFunctions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/modules/TodoMVCTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/TodoMVCTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/crossbrowser/chrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/crossbrowser/chrome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/supports/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/supports/Browser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/libraries/TodoFunctions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/libraries/TodoFunctions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/modules/TodoMVCTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/modules/TodoMVCTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/modules/crossbrowser/chrome.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/modules/crossbrowser/chrome.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/supports/Browser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/supports/Browser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/AK-24.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/AK-24.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/driver/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/driver/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/libraries/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/src/test/java/libraries/Functions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Fado/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/src/test/java/modules/Fado/SearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/crossbrowser/chrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/src/test/java/modules/crossbrowser/chrome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/libraries/Functions.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/target/test-classes/libraries/Functions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/BasicAuth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Checkbox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/DropdownBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Fado/SearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Fado/SearchTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/GoogleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/JSAlert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/NestFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Redirector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Table.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/TodoMVC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/TodoMVCTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/crossbrowser/chrome.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/target/test-classes/modules/crossbrowser/chrome.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/iFrame.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,24 +76,25 @@
   <component name="ProjectId" id="1TgO3gVDfCeCgJDnrgdw3KI0hkE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Fado" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Tien\IdeaProjects\AK-24\driver" />
-      <recent name="C:\Users\Tien\IdeaProjects\AK-24" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="crossbrowser" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Tien\IdeaProjects\AK-24\driver" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="crossbrowser" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tien\IdeaProjects\AK-24\driver" />
+      <recent name="C:\Users\Tien\IdeaProjects\AK-24" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -72,61 +109,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TodoMVCTest">
-    <configuration name="BasicAuth" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="modules.crossbrowser.BasicAuth" />
-      <module name="AK-24" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="supports.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Table" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="modules.crossbrowser.Table" />
-      <module name="AK-24" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="supports.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="modules.crossbrowser.Test" />
-      <module name="AK-24" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="supports.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoMVC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="modules.TodoMVC" />
-      <module name="AK-24" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="supports.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoMVCTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="modules.TodoMVCTest" />
+  <component name="RunManager" selected="TestNG.TodoMVCTest (3)">
+    <configuration name="TodoMVCTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AK-24" />
       <extension name="coverage">
         <pattern>
@@ -134,24 +118,98 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="modules" />
+      <option name="MAIN_CLASS_NAME" value="modules.TodoMVCTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoMVCTest (2)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AK-24" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modules.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modules" />
+      <option name="MAIN_CLASS_NAME" value="modules.TodoMVCTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoMVCTest (3)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AK-24" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modules.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modules" />
+      <option name="MAIN_CLASS_NAME" value="modules.TodoMVCTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoMVCTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AK-24" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modules.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modules" />
+      <option name="MAIN_CLASS_NAME" value="modules.TodoMVCTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoMVCTest.addNewTask (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AK-24" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modules.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modules" />
+      <option name="MAIN_CLASS_NAME" value="modules.TodoMVCTest" />
+      <option name="METHOD_NAME" value="addNewTask" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.BasicAuth" />
-      <item itemvalue="Application.Table" />
-      <item itemvalue="Application.Test" />
-      <item itemvalue="Application.TodoMVC" />
-      <item itemvalue="Application.TodoMVCTest" />
+      <item itemvalue="TestNG.TodoMVCTest" />
+      <item itemvalue="TestNG.TodoMVCTest.addNewTask (1)" />
+      <item itemvalue="TestNG.TodoMVCTest (1)" />
+      <item itemvalue="TestNG.TodoMVCTest (2)" />
+      <item itemvalue="TestNG.TodoMVCTest (3)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TodoMVCTest" />
-        <item itemvalue="Application.TodoMVC" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.Table" />
-        <item itemvalue="Application.BasicAuth" />
+        <item itemvalue="TestNG.TodoMVCTest (3)" />
+        <item itemvalue="TestNG.TodoMVCTest" />
+        <item itemvalue="TestNG.TodoMVCTest (2)" />
+        <item itemvalue="TestNG.TodoMVCTest.addNewTask (1)" />
+        <item itemvalue="TestNG.TodoMVCTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +253,12 @@
       <workItem from="1576553935564" duration="3007000" />
       <workItem from="1576639209290" duration="73000" />
       <workItem from="1576671186704" duration="2551000" />
-      <workItem from="1576733975855" duration="2677000" />
+      <workItem from="1576733975855" duration="2871000" />
+      <workItem from="1576893828589" duration="369000" />
+      <workItem from="1576894654441" duration="1681000" />
+      <workItem from="1576896410796" duration="8085000" />
+      <workItem from="1577083537206" duration="1693000" />
+      <workItem from="1577085442496" duration="4689000" />
     </task>
     <servers />
   </component>

@@ -1,13 +1,15 @@
 package libraries;
 
 import com.sun.org.apache.xml.internal.serializer.ElemDesc;
+import objects.TodoObjects;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.How;
 import supports.Browser;
 
 import java.util.List;
 
-public class TodoFunctions {
+public class TodoFunctions extends TodoObjects {
     /**
      * perform manual tests -> define common functions -> get locator objects
      * 1. creat new to do
@@ -23,46 +25,72 @@ public class TodoFunctions {
      * 11. get to do
      */
 
-    public void createNewTodo (String taskName){
-        Browser.fill(How.CLASS_NAME,"new-todo",taskName + "\n");
+    public void createNewTodo(String taskName) {
+        Browser.fill(NEW_TODO_TXT, taskName + "\n");
     }
-    public void editTodoName (String oldName, String newName){
-        String todo = String.format("//label[.='%s']",oldName);
+
+    public void editTodoName(String oldName, String newName) {
         if (isTodoExisted(oldName)) {
-        Browser.doubleClick(How.XPATH,todo);
-        Browser.fill(How.XPATH,todo + "/../../input",newName + "\n");
-        }
-        else System.out.println("ko co " + oldName);
+            Browser.doubleClick(getTask(oldName));
+            Browser.fill(updateTask(oldName),newName + "\n");
+        } else System.out.println("ko co " + oldName);
     }
-    public void deleteTodo(String taskName){
-        String todo = String.format("//label[.='%s']",taskName);
-        if (isTodoExisted(taskName)) {
-            Browser.hover(How.XPATH, todo);
-            Browser.find(How.XPATH, todo + "/following-sibling::button").click();
+
+    public void deleteTodo(String taskName) {
+        while (isTodoExisted(taskName)) {
+            Browser.hover(getTask(taskName));
+            Browser.find(deleteTask(taskName)).click();
         }
-        else System.out.println("ko co " + taskName);
     }
-    public boolean isTodoExisted (String taskName){
-        String todo = String.format("//label[.='%s']",taskName);
-        if (Browser.findAll(How.XPATH, todo).size()>0) return true;
+
+    public boolean isTodoExisted(String taskName) {
+        if (Browser.findAll(getTask(taskName)).size() > 0) return true;
         else return false;
     }
-    public List<WebElement> getTodo(String taskName){
-        return Browser.findAll(How.XPATH,String.format("//label[.='%s']", taskName));
+
+    public List<WebElement> getTodo(String taskName) {
+        return Browser.findAll(getTask(taskName));
     }
-    public void markDone (String taskName) {
-        String todo = String.format("//label[.='%s']",taskName);
+
+    public void markDone(String taskName) {
+        String todo = String.format("//label[.='%s']", taskName);
         if (isTodoExisted(taskName)) {
-            Browser.find(How.XPATH,todo + "//..//input").click();
-        }
-        else System.out.println("ko co " + taskName);
+            Browser.find(markDoneTask(taskName)).click();
+        } else System.out.println("ko co " + taskName);
     }
-    public void showAll (){
-        Browser.find(How.XPATH,"//a[.='All']").click();
-        List<WebElement> todo = Browser.findAll(How.XPATH,"//div[@class='view']//label");
-        System.out.println("Tong so todo: "+todo.size());
-        for (int i=0; i < todo.size();i++){
+
+    public void showAll() {
+        Browser.find(SHOW_ALL_LINK).click();
+        List<WebElement> todo = Browser.findAll(How.XPATH, "//div[@class='view']//label");
+        System.out.println("Tong so todo: " + todo.size());
+        for (int i = 0; i < todo.size(); i++) {
             System.out.println(todo.get(i).getText());
         }
+    }
+
+    public void showActive() {
+        Browser.find(SHOW_ACTIVE_LINK).click();
+        List<WebElement> todo = Browser.findAll(How.XPATH, "//div[@class='view']//label");
+        System.out.println("Tong so todo: " + todo.size());
+        for (int i = 0; i < todo.size(); i++) {
+            System.out.println(todo.get(i).getText());
+        }
+    }
+
+    public void showCompleted() {
+        Browser.find(SHOW_COMPLETED_LINK).click();
+        List<WebElement> todo = Browser.findAll(How.XPATH, "//div[@class='view']//label");
+        System.out.println("Tong so todo: " + todo.size());
+        for (int i = 0; i < todo.size(); i++) {
+            System.out.println(todo.get(i).getText());
+        }
+    }
+
+    public void clearCompleted() {
+        Browser.find(CLEAR_COMPLETED_TASKS_BTN).click();
+    }
+
+    public int countRemain() {
+        return Integer.parseInt(Browser.getText(REMAIN_TASK_LBL));
     }
 }
