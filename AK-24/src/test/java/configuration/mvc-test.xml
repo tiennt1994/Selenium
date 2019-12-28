@@ -1,8 +1,20 @@
 <suite name="todo-mvc">
-    <test name="create">
-
-
+    <test name="Create">
+        <classes>
+            <class name="modules.TodoMVCTest">
+                <methods>
+                        <include name ="addNewTask" />
+                </methods>
+            </class>
+        </classes>
     </test>
-
-
+    <test name="Edit">
+        <classes>
+            <class name="modules.TodoMVCTest">
+                <methods>
+                    <include name ="deleteTask" />
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>

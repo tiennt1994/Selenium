@@ -5,6 +5,7 @@ import objects.TodoObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.LoadableComponent;
 import supports.Browser;
 
 import java.util.List;
@@ -90,7 +91,7 @@ public class TodoFunctions extends TodoObjects {
         Browser.find(CLEAR_COMPLETED_TASKS_BTN).click();
     }
 
-    public int countRemain() {
-        return Integer.parseInt(Browser.getText(REMAIN_TASK_LBL));
+    public String countRemain() {
+        return Browser.getText(REMAIN_TASK_LBL);
     }
 }

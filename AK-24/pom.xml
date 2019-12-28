@@ -47,7 +47,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>.C:\Users\Tien\GitHub\Selenium\AK-24\src\test\java\configuration\mvc-test.xml</suiteXmlFile>
+                        <suiteXmlFile>./src/test/java/configurations/mvn-test.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
