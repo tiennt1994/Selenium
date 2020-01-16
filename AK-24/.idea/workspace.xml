@@ -2,18 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="692246a2-2f3a-48e4-b3e2-5a8afeee3c11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/libraries/BmiFunctions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/modules/CalculatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/configuration/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/configuration/bmi-test.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fado/.idea/libraries/Maven__org_jetbrains_annotations_18_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fado/src/test/java/modules/Fado/Testing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/configuration/mvc-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/configuration/mvc-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/libraries/TodoFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/libraries/TodoFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/libraries/BmiFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/libraries/BmiFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modules/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/CalculatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/modules/TodoMVCTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/TodoMVCTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/objects/TodoObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/objects/TodoObjects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/libraries/TodoFunctions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/libraries/TodoFunctions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/libraries/BmiFunctions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/libraries/BmiFunctions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/modules/CalculatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/modules/CalculatorTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/modules/TodoMVCTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/modules/TodoMVCTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/modules/crossbrowser/firefox.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/modules/crossbrowser/firefox.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/supports/Browser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/supports/Browser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/AK-24.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/Fado.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/libraries/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/src/test/java/libraries/Functions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/libraries/TodoFunctions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/BasicAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/Checkbox.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/DropdownBox.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/GoogleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/JSAlert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/NestFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/Redirector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/Table.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/TodoMVC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/TodoMVCTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/iFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Fado/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/src/test/java/modules/Fado/SearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/crossbrowser/firefox.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/src/test/java/modules/crossbrowser/firefox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/supports/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/src/test/java/supports/Browser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/screenshot/screenshot-1576296207383.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/screenshot/screenshot-1576296260749.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/screenshot/screenshot-1576662706711.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/screenshot/screenshot-1576824491338.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/screenshot/screenshot-1576824829939.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/libraries/Functions.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/target/test-classes/libraries/Functions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/libraries/TodoFunctions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/BasicAuth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/Checkbox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/DropdownBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/GoogleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/JSAlert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/NestFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/Redirector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/Table.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/TodoMVC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/TodoMVCTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/iFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Fado/SearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Fado/SearchTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/crossbrowser/firefox.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/target/test-classes/modules/crossbrowser/firefox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/supports/Browser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/target/test-classes/supports/Browser.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +95,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Fado" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -60,18 +103,18 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Tien\IdeaProjects\AK-24\driver" />
-      <recent name="C:\Users\Tien\IdeaProjects\AK-24" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Tien\IdeaProjects\AK-24\driver" />
-    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="libraries" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="crossbrowser" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tien\IdeaProjects\AK-24\driver" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tien\IdeaProjects\AK-24\driver" />
+      <recent name="C:\Users\Tien\IdeaProjects\AK-24" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -86,8 +129,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.CalculatorTest">
-    <configuration name="CalculatorTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.TodoMVCTest">
+    <configuration name="C:/Users/Tien/GitHub/Selenium/AK-24/src/test/java/configuration/bmi-test.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AK-24" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/configuration/bmi-test.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AK-24" />
       <extension name="coverage">
         <pattern>
@@ -104,7 +157,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest.Test (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorTest (2)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AK-24" />
       <extension name="coverage">
         <pattern>
@@ -114,15 +167,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="modules" />
       <option name="MAIN_CLASS_NAME" value="modules.CalculatorTest" />
-      <option name="METHOD_NAME" value="Test" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest.Test" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorTest (3)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AK-24" />
       <extension name="coverage">
         <pattern>
@@ -130,18 +182,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="modules" />
       <option name="MAIN_CLASS_NAME" value="modules.CalculatorTest" />
-      <option name="METHOD_NAME" value="Test" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -165,38 +208,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoMVCTest.addNewTask" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AK-24" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modules.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modules" />
-      <option name="MAIN_CLASS_NAME" value="modules.TodoMVCTest" />
-      <option name="METHOD_NAME" value="addNewTask" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="TestNG.CalculatorTest (1)" />
+      <item itemvalue="TestNG.CalculatorTest (2)" />
+      <item itemvalue="TestNG.CalculatorTest (3)" />
+      <item itemvalue="TestNG.C:/Users/Tien/GitHub/Selenium/AK-24/src/test/java/configuration/bmi-test.xml" />
       <item itemvalue="TestNG.TodoMVCTest" />
-      <item itemvalue="TestNG.TodoMVCTest.addNewTask" />
-      <item itemvalue="TestNG.CalculatorTest.Test" />
-      <item itemvalue="TestNG.CalculatorTest.Test (1)" />
-      <item itemvalue="TestNG.CalculatorTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CalculatorTest" />
-        <item itemvalue="TestNG.CalculatorTest.Test (1)" />
-        <item itemvalue="TestNG.CalculatorTest.Test" />
         <item itemvalue="TestNG.TodoMVCTest" />
-        <item itemvalue="TestNG.TodoMVCTest.addNewTask" />
+        <item itemvalue="TestNG.CalculatorTest (1)" />
+        <item itemvalue="TestNG.C:/Users/Tien/GitHub/Selenium/AK-24/src/test/java/configuration/bmi-test.xml" />
+        <item itemvalue="TestNG.CalculatorTest (3)" />
+        <item itemvalue="TestNG.CalculatorTest (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +275,11 @@
       <workItem from="1577249012508" duration="721000" />
       <workItem from="1577262324297" duration="1179000" />
       <workItem from="1577353832240" duration="2540000" />
-      <workItem from="1577499181784" duration="4377000" />
+      <workItem from="1577499181784" duration="10710000" />
+      <workItem from="1577776295765" duration="2592000" />
+      <workItem from="1577947018843" duration="3969000" />
+      <workItem from="1577959843027" duration="1394000" />
+      <workItem from="1578905159330" duration="174000" />
     </task>
     <servers />
   </component>

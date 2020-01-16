@@ -14,7 +14,7 @@ public class TodoMVCTest {
     @BeforeMethod
     public static void preConditions(){
         Browser.open("chrome");
-        todoPage = new TodoFunctions();
+        //todoPage = new TodoFunctions();
         Browser.get("http://todomvc.com/examples/vanillajs");
     }
 

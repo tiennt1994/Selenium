@@ -22,8 +22,8 @@ public class BmiFunctions extends LoadableComponent <BmiFunctions> {
     private  By resultLbl = By.xpath("//div[@class='bigtext']");
 
     @Override
-    protected void load() {
-        Browser.open("https://www.calculator.net/bmi-calculator.html");
+    public void load() {
+        Browser.get("https://www.calculator.net/bmi-calculator.html");
     }
 
     @Override

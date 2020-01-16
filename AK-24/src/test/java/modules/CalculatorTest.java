@@ -1,29 +1,38 @@
 package modules;
 
+import configuration.BaseTest;
 import libraries.BmiFunctions;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 import org.testng.annotations.Test;
 import supports.Browser;
 
-public class CalculatorTest {
-    public BmiFunctions bmiPage = new BmiFunctions();
+public class CalculatorTest extends BaseTest {
+    public BmiFunctions bmiPage;
 
-    @BeforeMethod
-    public void preConditions(){
-        Browser.open("chrome");
-        Browser.get("https://www.calculator.net/bmi-calculator.html");
-    }
-
-    @Test
-    public void Test (){
+    @BeforeClass
+    public void setUp() {
+        bmiPage = new BmiFunctions();
+        bmiPage.load();
         bmiPage.selectMetricTab();
-        bmiPage.fillForm("25","male","178","80");
-        bmiPage.shouldHaveResult("BMI = 25.2 kg/m2   (Overweight)");
     }
 
-    @AfterMethod
-    public void postConditions (){
-        Browser.close();
+    @DataProvider (name = "BmiData")
+    public Object[][] testData (){
+        return new Object[][] {
+                {"25","male","178","80","BMI = 25.2 kg/m2   (Overweight)"},
+                //{"25","male","178","70","BMI = 25.2 kg/m2   (Overweight)"},
+                //{"25","male","178","60","BMI = 25.2 kg/m2   (Overweight)"},
+                //{"25","male","178","50","BMI = 25.2 kg/m2   (Overweight)"},
+                //{"25","male","178","40","BMI = 25.2 kg/m2   (Overweight)"},
+        };
     }
+
+    @Test(dataProvider = "BmiData")
+    public void TC01 (String age, String gender, String height, String weight, String expectedResult){
+        bmiPage.selectMetricTab();
+        bmiPage.fillForm(age, gender, height, weight);
+        bmiPage.shouldHaveResult(expectedResult);
+    }
+
 }
