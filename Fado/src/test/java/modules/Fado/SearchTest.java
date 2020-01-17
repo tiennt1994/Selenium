@@ -18,6 +18,7 @@ public class SearchTest {
         Browser.get("https://fado.vn/");
     }
 
+    //search theo link amazon
     @Test
     public void TC01_searchLinkAmazonUs () throws InterruptedException {
         test.search("https://www.amazon.com/Samsung-Inch-Internal-MZ-76E1T0B-AM/dp/B078DPCY3T/ref=sr_1_1?keywords=ssd&qid=1576739385&sr=8-1");
@@ -43,6 +44,7 @@ public class SearchTest {
         Assert.assertFalse(isPresent);
     }
 
+    //search theo asin
     @Test
     public void TC05_searchAsinUs () throws InterruptedException {
         test.search("B07211W6X2");
@@ -51,13 +53,13 @@ public class SearchTest {
     }
     @Test
     public void TC06_searchAsinJp () throws InterruptedException {
-        test.search("B07211W6X2");
+        test.search("B07TXY7GM2");
         boolean isPresent = test.checkSearch("jp");
         Assert.assertFalse(isPresent);
     }
     @Test
     public void TC07_searchAsinDe () throws InterruptedException {
-        test.search("B07211W6X2");
+        test.search("B07HH7GB87");
         boolean isPresent = test.checkSearch("de");
         Assert.assertFalse(isPresent);
     }
@@ -65,6 +67,50 @@ public class SearchTest {
     public void TC08_searchAsinUk () throws InterruptedException {
         test.search("B000795N4W");
         boolean isPresent = test.checkSearch("uk");
+        Assert.assertFalse(isPresent);
+    }
+
+    //search theo keyword
+    @Test
+    public void TC09_searchKeywordAll () throws InterruptedException {
+        test.search("Máy tính bảng");
+        boolean isPresent = test.checkSearch("all");
+        Assert.assertFalse(isPresent);
+    }
+    @Test
+    public void TC10_searchKeywordUs () throws InterruptedException {
+        test.searchUs("Máy tính bảng");
+        boolean isPresent = test.checkSearch("us");
+        Assert.assertFalse(isPresent);
+    }
+    @Test
+    public void TC11_searchKeywordJp () throws InterruptedException {
+        test.searchUs("iphone");
+        boolean isPresent = test.checkSearch("jp");
+        Assert.assertFalse(isPresent);
+    }
+    @Test
+    public void TC12_searchKeywordDe () throws InterruptedException {
+        test.searchUs("laptop");
+        boolean isPresent = test.checkSearch("de");
+        Assert.assertFalse(isPresent);
+    }
+    @Test
+    public void TC13_searchKeywordUk () throws InterruptedException {
+        test.searchUs("apple watch");
+        boolean isPresent = test.checkSearch("uk");
+        Assert.assertFalse(isPresent);
+    }
+    @Test
+    public void TC14_searchKeywordAu () throws InterruptedException {
+        test.searchUs("vitamin c");
+        boolean isPresent = test.checkSearch("au");
+        Assert.assertFalse(isPresent);
+    }
+    @Test
+    public void TC15_searchKeywordStore () throws InterruptedException {
+        test.searchUs("giày");
+        boolean isPresent = test.checkSearch("store");
         Assert.assertFalse(isPresent);
     }
 

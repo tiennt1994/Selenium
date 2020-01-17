@@ -46,7 +46,6 @@ public class Functions {
         Browser.find(How.XPATH,"//i[@class='fal fa-search']").click();
         Thread.sleep(4000);
     }
-
     public void searchJp (String keyWord) throws InterruptedException {
         Browser.find(How.XPATH,"//*[@class='search-from-dropdown mz-dropdown']/div[1]").click();
         Browser.find(How.XPATH,"//a[contains(text(),'Từ Nhật')]").click();
@@ -54,7 +53,6 @@ public class Functions {
         Browser.find(How.XPATH,"//i[@class='fal fa-search']").click();
         Thread.sleep(4000);
     }
-
     public void searchDe (String keyWord) throws InterruptedException {
         Browser.find(How.XPATH,"//*[@class='search-from-dropdown mz-dropdown']/div[1]").click();
         Browser.find(How.XPATH,"//a[contains(text(),'Từ Đức')]").click();
@@ -62,7 +60,6 @@ public class Functions {
         Browser.find(How.XPATH,"//i[@class='fal fa-search']").click();
         Thread.sleep(4000);
     }
-
     public void searchUk (String keyWord) throws InterruptedException {
         Browser.find(How.XPATH,"//*[@class='search-from-dropdown mz-dropdown']/div[1]").click();
         Browser.find(How.XPATH,"//a[contains(text(),'Từ Anh')]").click();
@@ -70,10 +67,16 @@ public class Functions {
         Browser.find(How.XPATH,"//i[@class='fal fa-search']").click();
         Thread.sleep(4000);
     }
-
     public void searchAu (String keyWord) throws InterruptedException {
         Browser.find(How.XPATH,"//*[@class='search-from-dropdown mz-dropdown']/div[1]").click();
         Browser.find(How.XPATH,"//a[contains(text(),'Từ Úc')]").click();
+        Browser.fill(How.CLASS_NAME,"mz-header-vsearch__keyword-input",keyWord);
+        Browser.find(How.XPATH,"//i[@class='fal fa-search']").click();
+        Thread.sleep(4000);
+    }
+    public void searchStore (String keyWord) throws InterruptedException {
+        Browser.find(How.XPATH,"//*[@class='search-from-dropdown mz-dropdown']/div[1]").click();
+        Browser.find(How.XPATH,"//a[contains(text(),'Từ Gian hàng')]").click();
         Browser.fill(How.CLASS_NAME,"mz-header-vsearch__keyword-input",keyWord);
         Browser.find(How.XPATH,"//i[@class='fal fa-search']").click();
         Thread.sleep(4000);
@@ -104,6 +107,11 @@ public class Functions {
             case "au":{
                 return (Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[5]//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
                         Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[5]//div[contains(text(),'Quý khách vui lòng')]").size() > 0 ||
+                        Browser.findAll(How.XPATH, "//*[@class='search-fail-block__head'][contains(text(),'Rất tiếc')]").size() > 0);
+            }
+            case "store":{
+                return (Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[6]//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
+                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[6]//div[contains(text(),'Quý khách vui lòng')]").size() > 0 ||
                         Browser.findAll(How.XPATH, "//*[@class='search-fail-block__head'][contains(text(),'Rất tiếc')]").size() > 0);
             }
             case "all": {
