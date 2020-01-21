@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.How;
 import supports.Browser;
 
-public class Functions {
+public class Functions_Search {
     public void login(String userName, String password) throws InterruptedException {
         Browser.open("chrome");
         Browser.maximize();
@@ -28,9 +28,9 @@ public class Functions {
             Browser.find(How.XPATH,"//*[@class='close']").click();
         }
         // close popup nhan diem
-        if (isExisted("//div[@id='regist-get-point-modal__form-block']/button[1]")){
-            Browser.find(How.XPATH,"//div[@id='regist-get-point-modal__form-block']/button[1]").click();
-        }
+        //if (isExisted("//div[@id='regist-get-point-modal__form-block']/button[1]")){
+        //    Browser.find(How.XPATH,"//div[@id='regist-get-point-modal__form-block']/button[1]").click();
+        //}
     }
 
     public void search (String keyWord) throws InterruptedException {
@@ -129,6 +129,19 @@ public class Functions {
             default:
                 throw new IllegalStateException("country ko dung: " + country);
         }
+    }
+
+    public boolean checkPrice () {
+        return ((Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[1]//div[contains(text(),'Không hỗ trợ')]").size() > 0 &&
+                Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[2]//div[contains(text(),'Không hỗ trợ')]").size() > 0 &&
+                Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[3]//div[contains(text(),'Không hỗ trợ')]").size() > 0 &&
+                Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[4]//div[contains(text(),'Không hỗ trợ')]").size() > 0 &&
+                Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[5]//div[contains(text(),'Không hỗ trợ')]").size() > 0) ||
+                        (Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[1]//div[contains(text(),'báo giá')]").size() > 0 &&
+                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[2]//div[contains(text(),'báo giá')]").size() > 0 &&
+                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[3]//div[contains(text(),'báo giá')]").size() > 0 &&
+                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[4]//div[contains(text(),'báo giá')]").size() > 0 &&
+                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[5]//div[contains(text(),'báo giá')]").size() > 0));
     }
 }
 

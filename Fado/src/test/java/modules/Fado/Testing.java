@@ -1,35 +1,28 @@
 package modules.Fado;
 
 import libraries.Functions;
+import libraries.Functions_Search;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import supports.Browser;
 
 public class Testing {
-    public Functions test;
+    public Functions_Search test;
 
     @BeforeMethod
     public void setUp(){
-        test = new Functions();
+        test = new Functions_Search();
         Browser.open("chrome");
         Browser.get("https://fado.vn/");
+        test.closePopup();
     }
 
     @Test
-    public void searchKeywordMy () throws InterruptedException {
-        test.searchUs("ssd");
-        boolean isPresent = test.checkSearch("us");
+    public void TC09_searchKeywordAll () throws InterruptedException {
+        test.search("Máy tính bảng");
+        boolean isPresent = test.checkSearch("all");
         Assert.assertFalse(isPresent);
-        Thread.sleep(1000);
-    }
-
-    @Test
-    public void searchKeywordMy2 () throws InterruptedException {
-        test.searchUs("ssd ahihi");
-        boolean isPresent = test.checkSearch("us");
-        Assert.assertFalse(isPresent);
-        Thread.sleep(1000);
     }
 
     @AfterMethod

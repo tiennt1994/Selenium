@@ -1,6 +1,7 @@
 package modules.Fado;
 
 import libraries.Functions;
+import libraries.Functions_Search;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.How;
 import org.testng.Assert;
@@ -9,11 +10,11 @@ import org.testng.annotations.*;
 import supports.Browser;
 
 public class SearchTest {
-    public Functions test;
+    public Functions_Search test;
 
     @BeforeMethod
     public void setUp(){
-        test = new Functions();
+        test = new Functions_Search();
         Browser.open("chrome");
         Browser.get("https://fado.vn/");
     }
@@ -73,7 +74,7 @@ public class SearchTest {
     //search theo keyword
     @Test
     public void TC09_searchKeywordAll () throws InterruptedException {
-        test.search("Máy tính bảng");
+        test.search("tablet");
         boolean isPresent = test.checkSearch("all");
         Assert.assertFalse(isPresent);
     }
@@ -85,32 +86,38 @@ public class SearchTest {
     }
     @Test
     public void TC11_searchKeywordJp () throws InterruptedException {
-        test.searchUs("iphone");
+        test.searchJp("iphone");
         boolean isPresent = test.checkSearch("jp");
         Assert.assertFalse(isPresent);
     }
     @Test
     public void TC12_searchKeywordDe () throws InterruptedException {
-        test.searchUs("laptop");
+        test.searchDe("laptop");
         boolean isPresent = test.checkSearch("de");
         Assert.assertFalse(isPresent);
     }
     @Test
     public void TC13_searchKeywordUk () throws InterruptedException {
-        test.searchUs("apple watch");
+        test.searchUk("apple watch");
         boolean isPresent = test.checkSearch("uk");
         Assert.assertFalse(isPresent);
     }
     @Test
     public void TC14_searchKeywordAu () throws InterruptedException {
-        test.searchUs("vitamin c");
+        test.searchAu("vitamin c");
         boolean isPresent = test.checkSearch("au");
         Assert.assertFalse(isPresent);
     }
     @Test
     public void TC15_searchKeywordStore () throws InterruptedException {
-        test.searchUs("giày");
+        test.searchStore("giày");
         boolean isPresent = test.checkSearch("store");
+        Assert.assertFalse(isPresent);
+    }
+    @Test
+    public void TC16_searchKeywordName () throws InterruptedException {
+        test.search("Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin Zero Frame Monitor (HDMI & VGA port)");
+        boolean isPresent = test.checkSearch("us");
         Assert.assertFalse(isPresent);
     }
 
