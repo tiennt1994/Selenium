@@ -1,6 +1,5 @@
 package modules.Fado;
 
-import libraries.Functions;
 import libraries.Functions_Search;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -19,9 +18,9 @@ public class Testing {
     }
 
     @Test
-    public void TC09_searchKeywordAll () throws InterruptedException {
-        test.search("Máy tính bảng");
-        boolean isPresent = test.checkSearch("all");
+    public void searchPrice () throws InterruptedException {
+        test.search("g502 se");
+        boolean isPresent = test.checkPrice();
         Assert.assertFalse(isPresent);
     }
 

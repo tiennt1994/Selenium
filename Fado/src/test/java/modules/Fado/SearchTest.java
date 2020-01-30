@@ -1,6 +1,5 @@
 package modules.Fado;
 
-import libraries.Functions;
 import libraries.Functions_Search;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.How;
@@ -118,6 +117,14 @@ public class SearchTest {
     public void TC16_searchKeywordName () throws InterruptedException {
         test.search("Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin Zero Frame Monitor (HDMI & VGA port)");
         boolean isPresent = test.checkSearch("us");
+        Assert.assertFalse(isPresent);
+    }
+
+    //search check gia sp
+    @Test
+    public void searchCheckPrice () throws InterruptedException {
+        test.search("g502 se");
+        boolean isPresent = test.checkPrice();
         Assert.assertFalse(isPresent);
     }
 
