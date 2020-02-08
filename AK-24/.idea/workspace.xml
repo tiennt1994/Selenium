@@ -2,61 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="692246a2-2f3a-48e4-b3e2-5a8afeee3c11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/configuration/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/configuration/bmi-test.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Fado/.idea/libraries/Maven__org_jetbrains_annotations_18_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Fado/src/test/java/modules/Fado/Testing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/libraries/BmiFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/libraries/BmiFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/CalculatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modules/TodoMVCTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modules/TodoMVCTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/libraries/BmiFunctions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/libraries/BmiFunctions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/modules/CalculatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/modules/CalculatorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/modules/TodoMVCTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/modules/TodoMVCTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/AK-24.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/Fado.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/libraries/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/src/test/java/libraries/Functions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/libraries/TodoFunctions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/BasicAuth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/Checkbox.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/DropdownBox.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/GoogleTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/JSAlert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/Login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/NestFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/Redirector.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/Table.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/TodoMVC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/TodoMVCTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Example/iFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Fado/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/src/test/java/modules/Fado/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/crossbrowser/firefox.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/src/test/java/modules/crossbrowser/firefox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/supports/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/src/test/java/supports/Browser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/screenshot/screenshot-1576296207383.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/screenshot/screenshot-1576296260749.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/screenshot/screenshot-1576662706711.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/screenshot/screenshot-1576824491338.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/screenshot/screenshot-1576824829939.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/libraries/Functions.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/target/test-classes/libraries/Functions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/libraries/TodoFunctions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/BasicAuth.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/Checkbox.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/DropdownBox.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/GoogleTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/JSAlert.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/Login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/NestFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/Redirector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/Table.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/TodoMVC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/TodoMVCTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Example/iFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Fado/SearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Fado/SearchTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/crossbrowser/firefox.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/target/test-classes/modules/crossbrowser/firefox.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/supports/Browser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/target/test-classes/supports/Browser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fado/src/test/java/modules/Fado/MobileSearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Fado/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/src/test/java/modules/Fado/Testing.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -280,6 +227,7 @@
       <workItem from="1577947018843" duration="3969000" />
       <workItem from="1577959843027" duration="1394000" />
       <workItem from="1578905159330" duration="174000" />
+      <workItem from="1580466241960" duration="351000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,7 @@
 package modules.Fado;
 
 import libraries.Functions_Search;
+import libraries.Functions_Login;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.How;
 import supports.Browser;
@@ -13,11 +14,11 @@ public class LoginTest {
         //logInWrongEmail();
     }
     public static void logInSuccess () throws InterruptedException {
-        Functions_Search test = new Functions_Search();
+        Functions_Login test = new Functions_Login();
         test.login("tiennt@miczone.vn","tien2653084");
     }
     public static void logInNull () throws InterruptedException {
-        Functions_Search test = new Functions_Search();
+        Functions_Login test = new Functions_Login();
         test.login("","");
         WebElement message1 = Browser.find(How.ID,"email-error");
         WebElement message2 = Browser.find(How.ID, "password-error");
@@ -28,7 +29,7 @@ public class LoginTest {
         else System.out.println("fail");
     }
     public static void logInWrongPassword () throws InterruptedException {
-        Functions_Search test = new Functions_Search();
+        Functions_Login test = new Functions_Login();
         test.login("tiennt@miczone.vn","123456");
         WebElement error_message = Browser.find(How.XPATH,"//div[@class='my-alert -alert-danger']");
         if (error_message.getText().trim().equals("Có lỗi xảy ra:\n" +
@@ -38,7 +39,7 @@ public class LoginTest {
         else System.out.println("fail");
     }
     public static void logInWrongEmail () throws InterruptedException {
-        Functions_Search test = new Functions_Search();
+        Functions_Login test = new Functions_Login();
         test.login("tiennt1@miczone.vn","tien2653084");
         WebElement error_message = Browser.find(How.XPATH,"//b[@class='font--size-lg']");
         if (error_message.getText().trim().equals("Có lỗi xảy ra:")){

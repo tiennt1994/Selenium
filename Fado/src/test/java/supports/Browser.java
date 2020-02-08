@@ -13,12 +13,12 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.Select;
 
-import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Browser {
     private static WebDriver driver;
@@ -61,6 +61,17 @@ public class Browser {
             default:
                 throw new IllegalStateException("Browser ko dung: " + name);
         }
+    }
+    public static void openMobile() {
+        WebDriverManager.chromedriver().setup();
+        Map<String, String> mobileEmulation = new HashMap<>();
+        mobileEmulation.put("deviceName", "Nexus 5");
+
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--disable-notifications");// close notification cua trình duyệt
+        chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
+
+        driver = new ChromeDriver(chromeOptions);
     }
 
     public static void get(String url) {

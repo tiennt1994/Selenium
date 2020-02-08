@@ -1,25 +1,28 @@
 package modules.Fado;
 
-import libraries.Functions_Search;
+import libraries.Functions_MobileSearch;
 import org.testng.Assert;
 import org.testng.ITestResult;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import supports.Browser;
 
-public class Testing {
-    public Functions_Search test;
+public class MobileSearchTest {
+    public Functions_MobileSearch test;
 
     @BeforeMethod
     public void setUp(){
-        test = new Functions_Search();
-        Browser.open("chrome");
+        test = new Functions_MobileSearch();
+        Browser.openMobile();
+        //Browser.getDriver().manage().window().maximize();
         Browser.get("https://fado.vn/");
         test.closePopup();
     }
 
     @Test
     public void searchPrice () throws InterruptedException {
-        test.search("g502 se");
+        test.search("ssd");
         boolean isPresent = test.checkPrice();
         Assert.assertFalse(isPresent);
     }
