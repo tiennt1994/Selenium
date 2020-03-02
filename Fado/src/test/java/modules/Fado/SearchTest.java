@@ -122,7 +122,7 @@ public class SearchTest {
 
     //search check gia sp
     @Test
-    public void searchCheckPrice () throws InterruptedException {
+    public void TC17_searchCheckPrice () throws InterruptedException {
         test.search("g502 se");
         boolean isPresent = test.checkPrice();
         Assert.assertFalse(isPresent);

@@ -5,10 +5,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.How;
 import supports.Browser;
+import java.util.Random;
 
 public class Functions_Search {
-    public boolean isExisted (String x){
-        if (Browser.findAll(How.XPATH, x).size()>0) {
+    public boolean isExisted (String element){
+        if (Browser.findAll(How.XPATH, element).size()>0) {
             return true;
         }
         else return false;
@@ -23,6 +24,17 @@ public class Functions_Search {
         //if (isExisted("//div[@id='regist-get-point-modal__form-block']/button[1]")){
         //    Browser.find(How.XPATH,"//div[@id='regist-get-point-modal__form-block']/button[1]").click();
         //}
+    }
+
+    String[] keywords = {"ssd","laptop","may tinh","tablet","máy tính bảng","đồng hồ","apple watch","vitamin c","airpods"};
+
+    public int createRandomNumber() {
+        Random ran = new Random();
+        return ran.nextInt(keywords.length);
+    }
+    public String randomKeyword() {
+        String randomKeyword = keywords[createRandomNumber()];
+        return randomKeyword;
     }
 
     public void search (String keyWord) throws InterruptedException {
@@ -77,46 +89,42 @@ public class Functions_Search {
     public boolean checkSearch (String country) {
         switch (country.toLowerCase()) {
             case "us": {
-                return (Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[contains(text(),'Quý khách vui lòng')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-fail-block__head']//div[contains(text(),'Rất tiếc')]").size() > 0);
+                return (Browser.findAll(How.XPATH, "//div[@class='all-empty-result-content'][contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
+                        Browser.findAll(How.XPATH, "//span[@class='search-country-label'][contains(text(),'Mỹ')]").size() > 0 ||
+                        Browser.findAll(How.XPATH, "//*[@class='search-fail-block__head'][contains(text(),'Rất tiếc')]").size() > 0);
             }
             case "jp": {
-                return (Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[2]//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[2]//div[contains(text(),'Quý khách vui lòng')]").size() > 0 ||
+                return (Browser.findAll(How.XPATH, "//div[@class='all-empty-result-content'][contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
+                        Browser.findAll(How.XPATH, "//span[@class='search-country-label'][contains(text(),'Nhật')]").size() > 0 ||
                         Browser.findAll(How.XPATH, "//*[@class='search-fail-block__head'][contains(text(),'Rất tiếc')]").size() > 0);
             }
             case "de": {
-                return (Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[3]//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[3]//div[contains(text(),'Quý khách vui lòng')]").size() > 0 ||
+                return (Browser.findAll(How.XPATH, "//div[@class='all-empty-result-content'][contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
+                        Browser.findAll(How.XPATH, "//span[@class='search-country-label'][contains(text(),'Đức')]").size() > 0 ||
                         Browser.findAll(How.XPATH, "//*[@class='search-fail-block__head'][contains(text(),'Rất tiếc')]").size() > 0);
             }
             case "uk": {
-                return (Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[4]//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[4]//div[contains(text(),'Quý khách vui lòng')]").size() > 0 ||
+                return (Browser.findAll(How.XPATH, "//div[@class='all-empty-result-content'][contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
+                        Browser.findAll(How.XPATH, "//span[@class='search-country-label'][contains(text(),'Anh')]").size() > 0 ||
                         Browser.findAll(How.XPATH, "//*[@class='search-fail-block__head'][contains(text(),'Rất tiếc')]").size() > 0);
             }
             case "au":{
-                return (Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[5]//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[5]//div[contains(text(),'Quý khách vui lòng')]").size() > 0 ||
+                return (Browser.findAll(How.XPATH, "//div[@class='all-empty-result-content'][contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
+                        Browser.findAll(How.XPATH, "//span[@class='search-country-label'][contains(text(),'Úc')]").size() > 0 ||
                         Browser.findAll(How.XPATH, "//*[@class='search-fail-block__head'][contains(text(),'Rất tiếc')]").size() > 0);
             }
             case "store":{
-                return (Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[6]//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[6]//div[contains(text(),'Quý khách vui lòng')]").size() > 0 ||
+                return (Browser.findAll(How.XPATH, "//div[@class='all-empty-result-content'][contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
+                        Browser.findAll(How.XPATH, "//span[@class='search-country-label'][contains(text(),'Gian hàng')]").size() > 0 ||
                         Browser.findAll(How.XPATH, "//*[@class='search-fail-block__head'][contains(text(),'Rất tiếc')]").size() > 0);
             }
             case "all": {
-                return (Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[contains(text(),'Quý khách vui lòng')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[2]//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[2]//div[contains(text(),'Quý khách vui lòng')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[3]//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[3]//div[contains(text(),'Quý khách vui lòng')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[4]//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[4]//div[contains(text(),'Quý khách vui lòng')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[6]//div[contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[6]//div[contains(text(),'Quý khách vui lòng')]").size() > 0);
+                return (Browser.findAll(How.XPATH, "//div[@class='all-empty-result-content'][contains(text(),'Không tìm thấy sản phẩm')]").size() > 0 ||
+                        Browser.findAll(How.XPATH, "//span[@class='search-country-label'][contains(text(),'Mỹ')]").size() > 0 ||
+                        Browser.findAll(How.XPATH, "//span[@class='search-country-label'][contains(text(),'Đức')]").size() > 0 ||
+                        Browser.findAll(How.XPATH, "//span[@class='search-country-label'][contains(text(),'Nhật')]").size() > 0 ||
+                        Browser.findAll(How.XPATH, "//span[@class='search-country-label'][contains(text(),'Anh')]").size() > 0 ||
+                        Browser.findAll(How.XPATH, "//span[@class='search-country-label'][contains(text(),'Gian hàng')]").size() > 0);
             }
             default:
                 throw new IllegalStateException("country ko dung: " + country);
@@ -124,16 +132,16 @@ public class Functions_Search {
     }
 
     public boolean checkPrice () {
-        return ((Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[1]//div[contains(text(),'Không hỗ trợ')]").size() > 0 &&
-                Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[2]//div[contains(text(),'Không hỗ trợ')]").size() > 0 &&
-                Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[3]//div[contains(text(),'Không hỗ trợ')]").size() > 0 &&
-                Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[4]//div[contains(text(),'Không hỗ trợ')]").size() > 0 &&
-                Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[5]//div[contains(text(),'Không hỗ trợ')]").size() > 0) ||
-                        (Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[1]//div[contains(text(),'báo giá')]").size() > 0 &&
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[2]//div[contains(text(),'báo giá')]").size() > 0 &&
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[3]//div[contains(text(),'báo giá')]").size() > 0 &&
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[4]//div[contains(text(),'báo giá')]").size() > 0 &&
-                        Browser.findAll(How.XPATH, "//*[@class='search-result-layout']/section[1]//div[@class='swiper-wrapper']/div[5]//div[contains(text(),'báo giá')]").size() > 0));
+        return ((Browser.findAll(How.XPATH, "//*[@class='success-search-section']/div[1]//div[@class='search-product-item-row']/div[1]//a[contains(text(),'Không hỗ trợ')]").size() > 0 &&
+                Browser.findAll(How.XPATH, "//*[@class='success-search-section']/div[1]//div[@class='search-product-item-row']/div[2]//a[contains(text(),'Không hỗ trợ')]").size() > 0 &&
+                Browser.findAll(How.XPATH, "//*[@class='success-search-section']/div[1]//div[@class='search-product-item-row']/div[3]//a[contains(text(),'Không hỗ trợ')]").size() > 0 &&
+                Browser.findAll(How.XPATH, "//*[@class='success-search-section']/div[1]//div[@class='search-product-item-row']/div[4]//a[contains(text(),'Không hỗ trợ')]").size() > 0 &&
+                Browser.findAll(How.XPATH, "//*[@class='success-search-section']/div[1]//div[@class='search-product-item-row']/div[5]//a[contains(text(),'Không hỗ trợ')]").size() > 0) ||
+                        (Browser.findAll(How.XPATH, "//*[@class='success-search-section']/div[1]//div[@class='search-product-item-row']/div[1]//a[contains(text(),'báo giá')]").size() > 0 &&
+                        Browser.findAll(How.XPATH, "//*[@class='success-search-section']/div[1]//div[@class='search-product-item-row']/div[2]//a[contains(text(),'báo giá')]").size() > 0 &&
+                        Browser.findAll(How.XPATH, "//*[@class='success-search-section']/div[1]//div[@class='search-product-item-row']/div[3]//a[contains(text(),'báo giá')]").size() > 0 &&
+                        Browser.findAll(How.XPATH, "//*[@class='success-search-section']/div[1]//div[@class='search-product-item-row']/div[4]//a[contains(text(),'báo giá')]").size() > 0 &&
+                        Browser.findAll(How.XPATH, "//*[@class='success-search-section']/div[1]//div[@class='search-product-item-row']/div[5]//a[contains(text(),'báo giá')]").size() > 0));
     }
 }
 
