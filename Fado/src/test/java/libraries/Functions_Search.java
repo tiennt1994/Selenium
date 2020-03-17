@@ -4,6 +4,7 @@ import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.How;
+import org.testng.annotations.DataProvider;
 import supports.Browser;
 import java.util.Random;
 
@@ -26,15 +27,14 @@ public class Functions_Search {
         //}
     }
 
-    String[] keywords = {"ssd","laptop","may tinh","tablet","máy tính bảng","đồng hồ","apple watch","vitamin c","airpods"};
+    String[] keywords = {"ssd","laptop","may tinh","tablet","máy tính bảng","đồng hồ","apple watch","vitamin c","airpods","hot toys","mắt kiếng"};
 
     public int createRandomNumber() {
         Random ran = new Random();
         return ran.nextInt(keywords.length);
     }
     public String randomKeyword() {
-        String randomKeyword = keywords[createRandomNumber()];
-        return randomKeyword;
+        return keywords[createRandomNumber()];
     }
 
     public void search (String keyWord) throws InterruptedException {
@@ -144,4 +144,6 @@ public class Functions_Search {
                         Browser.findAll(How.XPATH, "//*[@class='success-search-section']/div[1]//div[@class='search-product-item-row']/div[5]//a[contains(text(),'báo giá')]").size() > 0));
     }
 }
+
+
 

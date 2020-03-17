@@ -3,6 +3,7 @@ package modules.Fado;
 import com.github.javafaker.Faker;
 import libraries.Functions_MobileSearch;
 import libraries.Functions_Search;
+import libraries.Parameters;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
@@ -19,13 +20,13 @@ public class Testing {
         Browser.get("https://fado.vn/");
     }
 
-    @Test
-    public void TC01_searchLinkAmazonUs () throws InterruptedException {
-        test.search(test.randomKeyword());
+    @Test (dataProvider = "data_provider", dataProviderClass = Parameters.class)
+    public void TC01_searchLinkAmazonUs (String data) throws InterruptedException {
+        test.search(data);
         boolean isPresent = test.checkSearch("all");
         Assert.assertFalse(isPresent);
     }
-    @Test
+    @Test (enabled = false)
     public void TC02_searchLinkAmazonUs () throws InterruptedException {
         test.search(test.randomKeyword());
         boolean isPresent = test.checkSearch("all");
