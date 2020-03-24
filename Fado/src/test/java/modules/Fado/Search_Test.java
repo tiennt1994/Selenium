@@ -8,7 +8,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import supports.Browser;
 
-public class SearchTest {
+public class Search_Test {
     public Functions_Search test;
 
     @BeforeMethod
@@ -16,6 +16,7 @@ public class SearchTest {
         test = new Functions_Search();
         Browser.open("chrome");
         Browser.get("https://fado.vn/");
+        test.closePopup();
     }
 
     //search theo link amazon
@@ -27,13 +28,13 @@ public class SearchTest {
     }
     @Test
     public void TC02_searchLinkAmazonJp () throws InterruptedException {
-        test.search("https://www.amazon.co.jp/IPhone-%E6%90%BA%E5%B8%AF%E9%9B%BB%E8%A9%B1%E3%82%AB%E3%83%90%E3%83%BC-%E5%A4%9A%E6%A9%9F%E8%83%BD%E3%82%B9%E3%83%9E%E3%83%9B%E3%82%B1%E3%83%BC%E3%82%B9-%E3%82%AB%E3%83%BC%E3%83%89%E3%83%9B%E3%83%AB%E3%83%80%E3%83%BC-%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%E3%83%A0%E3%83%AC%E3%82%B6%E3%83%BC/dp/B07YXJC4DH/ref=sr_1_3?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&keywords=iphone&qid=1576742757&sr=8-3");
+        test.search("https://www.amazon.co.jp/intime-%E3%82%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BC%E3%83%A0%EF%BC%89-%E7%A2%A7%EF%BC%88SORA%EF%BC%89-2-%E3%83%8F%E3%82%A4%E3%83%AC%E3%82%BE%E5%AF%BE%E5%BF%9C%E3%82%AB%E3%83%8A%E3%83%AB%E5%9E%8B%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/dp/B08434Y22Z/ref=sr_1_15?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&dchild=1&keywords=headphones&qid=1584692246&s=electronics&sr=1-15");
         boolean isPresent = test.checkSearch("jp");
         Assert.assertFalse(isPresent);
     }
     @Test
     public void TC03_searchLinkAmazonDe () throws InterruptedException {
-        test.search("https://www.amazon.de/HUAWEI-Watch-Herzfrequenz-Messung-Wiedergabe-wasserdicht-Matte-Black/dp/B07YNCWPMM/ref=sr_1_1_sspa?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=watch&qid=1576743693&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzQjYyMUdIQ0FWUVomZW5jcnlwdGVkSWQ9QTA1MDI0NTYxMjhJWVhCS1BVSjRPJmVuY3J5cHRlZEFkSWQ9QTAxODg3NDBHTFFFQTUyU1IwQ0kmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl");
+        test.search("https://www.amazon.de/Anker-Datenhub-Ultrabooks-weiteren-kompatiblen/dp/B00Y211AFM?pf_rd_r=KF7EVGWE6MK1X2B4VAX0&pf_rd_p=d9a4a41e-2a85-5b89-9996-2d148a5ad340&pd_rd_r=e18d46a2-09e9-44f8-94f2-b4d6007bb047&pd_rd_w=tVmc1&pd_rd_wg=2H17m&ref_=pd_gw_ri");
         boolean isPresent = test.checkSearch("de");
         Assert.assertFalse(isPresent);
     }
@@ -59,7 +60,7 @@ public class SearchTest {
     }
     @Test
     public void TC07_searchAsinDe () throws InterruptedException {
-        test.search("B07HH7GB87");
+        test.search("B07SDDX7WX");
         boolean isPresent = test.checkSearch("de");
         Assert.assertFalse(isPresent);
     }
@@ -123,7 +124,7 @@ public class SearchTest {
     //search check gia sp
     @Test
     public void TC17_searchCheckPrice () throws InterruptedException {
-        test.search("g502 se");
+        test.search("laptop");
         boolean isPresent = test.checkPrice();
         Assert.assertFalse(isPresent);
     }
@@ -132,8 +133,8 @@ public class SearchTest {
     public void tearDown(ITestResult result) {
         if(!result.isSuccess()) {
             Browser.captureScreenshot(); // capture screenshot when test failed
-            String URL = Browser.getDriver().getCurrentUrl(); // print URL when test failed
-            System.out.println("FAIL URL ='" + URL + "'");
+            String failUrl = Browser.getDriver().getCurrentUrl(); // print URL when test failed
+            System.out.println("FAIL URL ='" + failUrl + "'");
         }
         Browser.close();
     }

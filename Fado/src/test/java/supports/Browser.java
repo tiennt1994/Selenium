@@ -13,6 +13,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
@@ -65,13 +67,14 @@ public class Browser {
     public static void openMobile() {
         WebDriverManager.chromedriver().setup();
         Map<String, String> mobileEmulation = new HashMap<>();
-        mobileEmulation.put("deviceName", "Nexus 5");
+        mobileEmulation.put("deviceName", "iPhone X");
 
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--disable-notifications");// close notification cua trình duyệt
         chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
 
         driver = new ChromeDriver(chromeOptions);
+        driver.manage().window().maximize();
     }
 
     public static void get(String url) {
@@ -131,6 +134,12 @@ public class Browser {
         } catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    public static void waitForElement(int seconds, String waitConditionLocator){
+        WebDriverWait wait = new WebDriverWait(driver, seconds);
+        wait.until(ExpectedConditions.visibilityOfElementLocated
+                (By.xpath(waitConditionLocator)));
     }
 
     public static void close(){

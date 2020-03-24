@@ -22,10 +22,19 @@ public class Functions_Login {
         //}
     }
 
-    public void login(String userName, String password) throws InterruptedException {
+    public void login(String userName, String password) {
         Browser.fill(How.NAME,"email", userName);
         Browser.fill(How.NAME,"password", password);
         Browser.find(How.XPATH, "//button[.='Đăng nhập']").click();
-        Thread.sleep(2000);
+    }
+
+    public boolean checkLoginSuccess () {
+        Browser.waitForElement(20,"//*[@class='user-name-col']");
+        return (Browser.findAll(How.XPATH, "//*[@class='user-name-col']").size()>0);
+    }
+
+    public boolean checkLoginFailNullData () {
+        return (Browser.findAll(How.XPATH,"//*[@id='auth-block__form-group__email-error'][contains(text(),'Vui lòng nhập dữ liệu')]").size()>0 &&
+                Browser.findAll(How.XPATH,"//*[@id='password-error'][contains(text(),'Vui lòng nhập dữ liệu')]").size()>0);
     }
 }
