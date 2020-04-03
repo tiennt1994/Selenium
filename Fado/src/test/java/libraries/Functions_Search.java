@@ -42,7 +42,6 @@ public class Functions_Search {
         Browser.find(How.XPATH,"//i[@class='fal fa-search']").click();
         Thread.sleep(6000);
     }
-
     public void searchUs (String keyWord) throws InterruptedException {
         Browser.find(How.XPATH,"//*[@class='search-from-dropdown mz-dropdown']/div[1]").click();
         Browser.find(How.XPATH,"//a[contains(text(),'Từ Mỹ')]").click();
@@ -116,7 +115,7 @@ public class Functions_Search {
             case "store":{
                 return (Browser.findAll(How.XPATH, "//div[@class='all-empty-result-content']").size() > 0 ||
                         Browser.findAll(How.XPATH, "//span[@class='search-country-label'][contains(text(),'Gian hàng')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//*[@class='search-fail-block__title'][contains(text(),'Rất tiếc')]").size() > 0);
+                        Browser.findAll(How.XPATH, "//*[@class='my-alert__info-col'][contains(text(),'Không tìm thấy')]").size() > 0);
             }
             case "all": {
                 return (Browser.findAll(How.XPATH, "//div[@class='all-empty-result-content']").size() > 0 ||

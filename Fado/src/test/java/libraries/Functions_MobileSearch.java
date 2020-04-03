@@ -24,11 +24,78 @@ public class Functions_MobileSearch {
     }
 
     public void searchMobile (String keyWord) throws InterruptedException {
-        Browser.find(How.XPATH,"//div[@class='search-segment']//input[@class='search-form__keyword-input']").click();
-        Browser.waitForElement(20,"//div[@class='search-segment']//input[@class='search-form__keyword-input']");
-        Browser.fill(How.XPATH,"//div[@class='mz-basic-sheet__inner is-show']//input[@class='search-form__keyword-input']",keyWord);
-        Browser.find(How.XPATH,"//div[@class='mz-basic-sheet__inner is-show']//input[@class='search-form__keyword-input']").sendKeys(Keys.ENTER);
-        Thread.sleep(6000);
+        Browser.elementToBeClickable(20,"//div[@class='search-segment']");
+        Browser.find(How.XPATH,"//div[@class='search-segment']").click();
+        Browser.waitForElement(20,"//input[@id='keywordInput']");
+        Browser.fill(How.XPATH,"//input[@id='keywordInput']",keyWord);
+        Browser.find(How.XPATH,"//input[@id='keywordInput']").sendKeys(Keys.ENTER);
+        Thread.sleep(5000);
+    }
+    public void searchMobileUs (String keyWord) throws InterruptedException {
+        Browser.elementToBeClickable(20,"//div[@class='search-segment']");
+        Browser.find(How.XPATH,"//div[@class='search-segment']").click();
+        Browser.waitForElement(20,"//div[@class='search-form__scope-icon-shape']");
+        Browser.find(How.XPATH,"//div[@class='search-form__scope-icon-shape']").click();
+        Browser.waitForElement(20,"//div[@data-scope-code='us']");
+        Browser.find(How.XPATH,"//div[@data-scope-code='us']").click();
+        Browser.fill(How.XPATH,"//input[@id='keywordInput']",keyWord);
+        Browser.find(How.XPATH,"//input[@id='keywordInput']").sendKeys(Keys.ENTER);
+        Thread.sleep(5000);
+    }
+    public void searchMobileJp (String keyWord) throws InterruptedException {
+        Browser.elementToBeClickable(20,"//div[@class='search-segment']");
+        Browser.find(How.XPATH,"//div[@class='search-segment']").click();
+        Browser.waitForElement(20,"//div[@class='search-form__scope-icon-shape']");
+        Browser.find(How.XPATH,"//div[@class='search-form__scope-icon-shape']").click();
+        Browser.waitForElement(20,"//div[@data-scope-code='jp']");
+        Browser.find(How.XPATH,"//div[@data-scope-code='jp']").click();
+        Browser.fill(How.XPATH,"//input[@id='keywordInput']",keyWord);
+        Browser.find(How.XPATH,"//input[@id='keywordInput']").sendKeys(Keys.ENTER);
+        Thread.sleep(5000);
+    }
+    public void searchMobileDe (String keyWord) throws InterruptedException {
+        Browser.elementToBeClickable(20,"//div[@class='search-segment']");
+        Browser.find(How.XPATH,"//div[@class='search-segment']").click();
+        Browser.waitForElement(20,"//div[@class='search-form__scope-icon-shape']");
+        Browser.find(How.XPATH,"//div[@class='search-form__scope-icon-shape']").click();
+        Browser.waitForElement(20,"//div[@data-scope-code='de']");
+        Browser.find(How.XPATH,"//div[@data-scope-code='de']").click();
+        Browser.fill(How.XPATH,"//input[@id='keywordInput']",keyWord);
+        Browser.find(How.XPATH,"//input[@id='keywordInput']").sendKeys(Keys.ENTER);
+        Thread.sleep(5000);
+    }
+    public void searchMobileUk (String keyWord) throws InterruptedException {
+        Browser.elementToBeClickable(20,"//div[@class='search-segment']");
+        Browser.find(How.XPATH,"//div[@class='search-segment']").click();
+        Browser.waitForElement(20,"//div[@class='search-form__scope-icon-shape']");
+        Browser.find(How.XPATH,"//div[@class='search-form__scope-icon-shape']").click();
+        Browser.waitForElement(20,"//div[@data-scope-code='uk']");
+        Browser.find(How.XPATH,"//div[@data-scope-code='uk']").click();
+        Browser.fill(How.XPATH,"//input[@id='keywordInput']",keyWord);
+        Browser.find(How.XPATH,"//input[@id='keywordInput']").sendKeys(Keys.ENTER);
+        Thread.sleep(5000);
+    }
+    public void searchMobileAu (String keyWord) throws InterruptedException {
+        Browser.elementToBeClickable(20,"//div[@class='search-segment']");
+        Browser.find(How.XPATH,"//div[@class='search-segment']").click();
+        Browser.waitForElement(20,"//div[@class='search-form__scope-icon-shape']");
+        Browser.find(How.XPATH,"//div[@class='search-form__scope-icon-shape']").click();
+        Browser.waitForElement(20,"//div[@data-scope-code='au']");
+        Browser.find(How.XPATH,"//div[@data-scope-code='au']").click();
+        Browser.fill(How.XPATH,"//input[@id='keywordInput']",keyWord);
+        Browser.find(How.XPATH,"//input[@id='keywordInput']").sendKeys(Keys.ENTER);
+        Thread.sleep(5000);
+    }
+    public void searchMobileStore (String keyWord) throws InterruptedException {
+        Browser.elementToBeClickable(20,"//div[@class='search-segment']");
+        Browser.find(How.XPATH,"//div[@class='search-segment']").click();
+        Browser.waitForElement(20,"//div[@class='search-form__scope-icon-shape']");
+        Browser.find(How.XPATH,"//div[@class='search-form__scope-icon-shape']").click();
+        Browser.waitForElement(20,"//div[@data-scope-code='store']");
+        Browser.find(How.XPATH,"//div[@data-scope-code='store']").click();
+        Browser.fill(How.XPATH,"//input[@id='keywordInput']",keyWord);
+        Browser.find(How.XPATH,"//input[@id='keywordInput']").sendKeys(Keys.ENTER);
+        Thread.sleep(5000);
     }
 
     public boolean checkSearchMobile (String country) {
@@ -61,7 +128,7 @@ public class Functions_MobileSearch {
             case "store":{
                 return (Browser.findAll(How.XPATH, "//div[@class='all-empty-content']").size() > 0 ||
                         Browser.findAll(How.XPATH, "//div[@class='empty-country-product-field']//*[contains(text(),'Gian hàng')]").size() > 0 ||
-                        Browser.findAll(How.XPATH, "//div[@class='alert-content'][contains(text(),'Rất tiếc')]").size() > 0);
+                        Browser.findAll(How.XPATH, "//*[@class='mz-alert mz-alert-warning mz-mb-0']").size() > 0);
             }
             case "all": {
                 return (Browser.findAll(How.XPATH, "//div[@class='all-empty-content']").size() > 0 ||
@@ -76,18 +143,18 @@ public class Functions_MobileSearch {
         }
     }
 
-    public boolean checkPriceMobile () {
+    public boolean checkPriceMobile() {
         return ((Browser.findAll(How.XPATH, "//div[@class='search-result-section-inner is-show']/div[2]/div[1]//div[@class='mz-slider-grid-row mz-slider-grid-row-full-container']/div[1]//div[contains(text(),'Không hỗ trợ')]").size() > 0 &&
                 Browser.findAll(How.XPATH, "//div[@class='search-result-section-inner is-show']/div[2]/div[1]//div[@class='mz-slider-grid-row mz-slider-grid-row-full-container']/div[2]//div[contains(text(),'Không hỗ trợ')]").size() > 0 &&
                 Browser.findAll(How.XPATH, "//div[@class='search-result-section-inner is-show']/div[2]/div[1]//div[@class='mz-slider-grid-row mz-slider-grid-row-full-container']/div[3]//div[contains(text(),'Không hỗ trợ')]").size() > 0 &&
                 Browser.findAll(How.XPATH, "//div[@class='search-result-section-inner is-show']/div[2]/div[1]//div[@class='mz-slider-grid-row mz-slider-grid-row-full-container']/div[4]//div[contains(text(),'Không hỗ trợ')]").size() > 0 &&
                 Browser.findAll(How.XPATH, "//div[@class='search-result-section-inner is-show']/div[2]/div[1]//div[@class='mz-slider-grid-row mz-slider-grid-row-full-container']/div[5]//div[contains(text(),'Không hỗ trợ')]").size() > 0) ||
-                        (Browser.findAll(How.XPATH, "//div[@class='search-result-section-inner is-show']/div[2]/div[1]//div[@class='mz-slider-grid-row mz-slider-grid-row-full-container']/div[1]//div[contains(text(),'báo giá')]").size() > 0 &&
+                (Browser.findAll(How.XPATH, "//div[@class='search-result-section-inner is-show']/div[2]/div[1]//div[@class='mz-slider-grid-row mz-slider-grid-row-full-container']/div[1]//div[contains(text(),'báo giá')]").size() > 0 &&
                         Browser.findAll(How.XPATH, "//div[@class='search-result-section-inner is-show']/div[2]/div[1]//div[@class='mz-slider-grid-row mz-slider-grid-row-full-container']/div[2]//div[contains(text(),'báo giá')]").size() > 0 &&
                         Browser.findAll(How.XPATH, "//div[@class='search-result-section-inner is-show']/div[2]/div[1]//div[@class='mz-slider-grid-row mz-slider-grid-row-full-container']/div[3]//div[contains(text(),'báo giá')]").size() > 0 &&
                         Browser.findAll(How.XPATH, "//div[@class='search-result-section-inner is-show']/div[2]/div[1]//div[@class='mz-slider-grid-row mz-slider-grid-row-full-container']/div[4]//div[contains(text(),'báo giá')]").size() > 0 &&
                         Browser.findAll(How.XPATH, "//div[@class='search-result-section-inner is-show']/div[2]/div[1]//div[@class='mz-slider-grid-row mz-slider-grid-row-full-container']/div[5]//div[contains(text(),'báo giá')]").size() > 0) ||
-                        (Browser.findAll(How.XPATH, "//div[@class='search-result-section-inner is-show']/div[2]/div[1]//div[@class='mz-slider-grid-row mz-slider-grid-row-full-container']/div[1]//div[contains(text(),'Đang cập nhật')]").size() > 0 &&
+                (Browser.findAll(How.XPATH, "//div[@class='search-result-section-inner is-show']/div[2]/div[1]//div[@class='mz-slider-grid-row mz-slider-grid-row-full-container']/div[1]//div[contains(text(),'Đang cập nhật')]").size() > 0 &&
                         Browser.findAll(How.XPATH, "//div[@class='search-result-section-inner is-show']/div[2]/div[1]//div[@class='mz-slider-grid-row mz-slider-grid-row-full-container']/div[2]//div[contains(text(),'Đang cập nhật')]").size() > 0 &&
                         Browser.findAll(How.XPATH, "//div[@class='search-result-section-inner is-show']/div[2]/div[1]//div[@class='mz-slider-grid-row mz-slider-grid-row-full-container']/div[3]//div[contains(text(),'Đang cập nhật')]").size() > 0 &&
                         Browser.findAll(How.XPATH, "//div[@class='search-result-section-inner is-show']/div[2]/div[1]//div[@class='mz-slider-grid-row mz-slider-grid-row-full-container']/div[4]//div[contains(text(),'Đang cập nhật')]").size() > 0 &&

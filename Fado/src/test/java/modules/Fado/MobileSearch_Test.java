@@ -15,7 +15,6 @@ public class MobileSearch_Test {
     public void setUp(){
         test = new Functions_MobileSearch();
         Browser.openMobile();
-        //Browser.getDriver().manage().window().maximize();
         Browser.get("https://fado.vn/");
         test.closePopup();
     }
@@ -48,8 +47,76 @@ public class MobileSearch_Test {
 
     //search theo asin
     @Test
-    public void TC01_searchAsinUs() throws InterruptedException {
+    public void TC05_searchAsinUs() throws InterruptedException {
         test.searchMobile("B07PXGQC1Q");
+        boolean isPresent = test.checkSearchMobile("us");
+        Assert.assertFalse(isPresent);
+    }
+    @Test
+    public void TC06_searchAsinJp () throws InterruptedException {
+        test.searchMobile("B01M0WS3AA");
+        boolean isPresent = test.checkSearchMobile("jp");
+        Assert.assertFalse(isPresent);
+    }
+    @Test
+    public void TC07_searchAsinDe () throws InterruptedException {
+        test.searchMobile("B07VWK99TK");
+        boolean isPresent = test.checkSearchMobile("de");
+        Assert.assertFalse(isPresent);
+    }
+    @Test
+    public void TC08_searchAsinUk () throws InterruptedException {
+        test.searchMobile("B07PJV3JPR");
+        boolean isPresent = test.checkSearchMobile("uk");
+        Assert.assertFalse(isPresent);
+    }
+
+    //search theo keyword
+    @Test
+    public void TC09_searchKeywordAll () throws InterruptedException {
+        test.searchMobile("tablet");
+        boolean isPresent = test.checkSearchMobile("all");
+        Assert.assertFalse(isPresent);
+    }
+    @Test
+    public void TC10_searchKeywordUs () throws InterruptedException {
+        test.searchMobileUs("iphone");
+        boolean isPresent = test.checkSearchMobile("us");
+        Assert.assertFalse(isPresent);
+    }
+    @Test
+    public void TC11_searchKeywordJp () throws InterruptedException {
+        test.searchMobileJp("アイリスの");
+        boolean isPresent = test.checkSearchMobile("jp");
+        Assert.assertFalse(isPresent);
+    }
+    @Test
+    public void TC12_searchKeywordDe () throws InterruptedException {
+        test.searchMobileDe("ipad");
+        boolean isPresent = test.checkSearchMobile("de");
+        Assert.assertFalse(isPresent);
+    }
+    @Test
+    public void TC13_searchKeywordUk () throws InterruptedException {
+        test.searchMobileUk("tissot watch");
+        boolean isPresent = test.checkSearchMobile("uk");
+        Assert.assertFalse(isPresent);
+    }
+    @Test
+    public void TC14_searchKeywordAu () throws InterruptedException {
+        test.searchMobileAu("vitamin c");
+        boolean isPresent = test.checkSearchMobile("au");
+        Assert.assertFalse(isPresent);
+    }
+    @Test
+    public void TC15_searchKeywordStore () throws InterruptedException {
+        test.searchMobileStore("nước hoa");
+        boolean isPresent = test.checkSearchMobile("store");
+        Assert.assertFalse(isPresent);
+    }
+    @Test (description = "search theo tên của item")
+    public void TC16_searchKeywordName () throws InterruptedException {
+        test.searchMobile("Apple MacBook Air (13-inch, 8GB RAM, 256GB Storage, 1.6GHz Intel Core i5) - Space Gray (Previous Model)");
         boolean isPresent = test.checkSearchMobile("us");
         Assert.assertFalse(isPresent);
     }

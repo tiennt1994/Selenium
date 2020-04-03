@@ -13,18 +13,24 @@ public class Testing {
     Faker faker = new Faker();
 
     @BeforeMethod
-    public void setUp(){
+    public void setUp() throws InterruptedException {
         test = new Functions_MobileSearch();
         Browser.openMobile();
-        //Browser.getDriver().manage().window().maximize();
         Browser.get("https://fado.vn/");
         test.closePopup();
     }
 
-    @Test (invocationCount = 1)
-    public void TC17_searchMobile () throws InterruptedException {
-        test.searchMobile("qqqqqqqqqqqqqqqqqqqqqqqq ưqeqư eqưe qưe");
-        boolean isPresent = test.checkSearchMobile("us");
+    @Test (invocationCount = 1, enabled = false)
+    public void TC01_searchMobile () throws InterruptedException {
+        test.searchMobile("tablet");
+        boolean isPresent = test.checkSearchMobile("all");
+        Assert.assertFalse(isPresent);
+    }
+
+    @Test (description = "search theo tên của item")
+    public void TC16_searchKeywordName () throws InterruptedException {
+        test.searchMobileStore("Apple MacBook Air (13-inch, 8GB RAM, 256GB Storage, 1.6GHz Intel Core i5) - Space Gray (Previous Model)");
+        boolean isPresent = test.checkSearchMobile("store");
         Assert.assertFalse(isPresent);
     }
 

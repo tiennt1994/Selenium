@@ -114,7 +114,7 @@ public class Search_Test {
         boolean isPresent = test.checkSearch("store");
         Assert.assertFalse(isPresent);
     }
-    @Test
+    @Test (description = "search theo tên của item")
     public void TC16_searchKeywordName () throws InterruptedException {
         test.search("Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin Zero Frame Monitor (HDMI & VGA port)");
         boolean isPresent = test.checkSearch("us");

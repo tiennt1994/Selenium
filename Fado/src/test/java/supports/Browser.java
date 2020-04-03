@@ -142,6 +142,11 @@ public class Browser {
                 (By.xpath(waitConditionLocator)));
     }
 
+    public static void elementToBeClickable(int seconds, String waitConditionLocator) {
+        WebDriverWait wait = new WebDriverWait(driver, seconds);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(waitConditionLocator)));
+    }
+
     public static void close(){
         if (driver != null){
             driver.quit();
