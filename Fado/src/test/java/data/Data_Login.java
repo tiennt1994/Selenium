@@ -8,12 +8,28 @@ public class Data_Login {
     @DataProvider(name="data_login")
     public Object [][] dataProviderMethod(Method method){
         Object [][] data = null;
-        if (method.getName().equals("loginSuccess")) {
-            data = new Object[][] {{"tiennt@miczone.vn", "tien2653084"},
-                    {"tiennumber1@gmail.com", "123456"}};
-        }
-        else if (method.getName().equals("loginFailNullData")) {
-            data = new Object[][] {{"", ""}};
+        switch (method.getName()) {
+            case "TC01_loginSuccess":
+                data = new Object[][]{{"tiennumber1@gmail.com", "123456"}};
+                break;
+            case "TC02_loginSuccess":
+                data = new Object[][]{{" tiennumber1@gmail.com ", "123456"}};
+                break;
+            case "TC03_loginFailNullData":
+                data = new Object[][]{{"", ""}};
+                break;
+            case "TC04_loginFailNullUsername":
+                data = new Object[][]{{"", "123456"}};
+                break;
+            case "TC05_loginFailNullPassword":
+                data = new Object[][]{{"tiennt@miczone.vn", ""}};
+                break;
+            case "TC06_loginFailWrongUsername":
+                data = new Object[][]{{"tiennt12@miczone.vn", "123456"}};
+                break;
+            case "TC07_loginFailWrongPassword":
+                data = new Object[][]{{"tiennumber1@gmail.com", "1234567"}};
+                break;
         }
         return data;
     }

@@ -24,16 +24,16 @@ public class Functions_MobileSearch {
     }
 
     public void searchMobile (String keyWord) throws InterruptedException {
-        Browser.elementToBeClickable(20,"//div[@class='search-segment']");
-        Browser.find(How.XPATH,"//div[@class='search-segment']").click();
+        Browser.elementToBeClickable(20,"//div[@class='header-main-bar static-search-bar']//*[@class='search-form__submit-btn']");
+        Browser.find(How.XPATH,"//div[@class='header-main-bar static-search-bar']//*[@class='search-form__submit-btn']").click();
         Browser.waitForElement(20,"//input[@id='keywordInput']");
         Browser.fill(How.XPATH,"//input[@id='keywordInput']",keyWord);
         Browser.find(How.XPATH,"//input[@id='keywordInput']").sendKeys(Keys.ENTER);
         Thread.sleep(5000);
     }
     public void searchMobileUs (String keyWord) throws InterruptedException {
-        Browser.elementToBeClickable(20,"//div[@class='search-segment']");
-        Browser.find(How.XPATH,"//div[@class='search-segment']").click();
+        Browser.elementToBeClickable(20,"//div[@class='header-main-bar static-search-bar']//*[@class='search-form__submit-btn']");
+        Browser.find(How.XPATH,"//div[@class='header-main-bar static-search-bar']//*[@class='search-form__submit-btn']").click();
         Browser.waitForElement(20,"//div[@class='search-form__scope-icon-shape']");
         Browser.find(How.XPATH,"//div[@class='search-form__scope-icon-shape']").click();
         Browser.waitForElement(20,"//div[@data-scope-code='us']");
@@ -43,8 +43,8 @@ public class Functions_MobileSearch {
         Thread.sleep(5000);
     }
     public void searchMobileJp (String keyWord) throws InterruptedException {
-        Browser.elementToBeClickable(20,"//div[@class='search-segment']");
-        Browser.find(How.XPATH,"//div[@class='search-segment']").click();
+        Browser.elementToBeClickable(20,"//div[@class='header-main-bar static-search-bar']//*[@class='search-form__submit-btn']");
+        Browser.find(How.XPATH,"//div[@class='header-main-bar static-search-bar']//*[@class='search-form__submit-btn']").click();
         Browser.waitForElement(20,"//div[@class='search-form__scope-icon-shape']");
         Browser.find(How.XPATH,"//div[@class='search-form__scope-icon-shape']").click();
         Browser.waitForElement(20,"//div[@data-scope-code='jp']");
@@ -54,8 +54,8 @@ public class Functions_MobileSearch {
         Thread.sleep(5000);
     }
     public void searchMobileDe (String keyWord) throws InterruptedException {
-        Browser.elementToBeClickable(20,"//div[@class='search-segment']");
-        Browser.find(How.XPATH,"//div[@class='search-segment']").click();
+        Browser.elementToBeClickable(20,"//div[@class='header-main-bar static-search-bar']//*[@class='search-form__submit-btn']");
+        Browser.find(How.XPATH,"//div[@class='header-main-bar static-search-bar']//*[@class='search-form__submit-btn']").click();
         Browser.waitForElement(20,"//div[@class='search-form__scope-icon-shape']");
         Browser.find(How.XPATH,"//div[@class='search-form__scope-icon-shape']").click();
         Browser.waitForElement(20,"//div[@data-scope-code='de']");
@@ -65,8 +65,8 @@ public class Functions_MobileSearch {
         Thread.sleep(5000);
     }
     public void searchMobileUk (String keyWord) throws InterruptedException {
-        Browser.elementToBeClickable(20,"//div[@class='search-segment']");
-        Browser.find(How.XPATH,"//div[@class='search-segment']").click();
+        Browser.elementToBeClickable(20,"//div[@class='header-main-bar static-search-bar']//*[@class='search-form__submit-btn']");
+        Browser.find(How.XPATH,"//div[@class='header-main-bar static-search-bar']//*[@class='search-form__submit-btn']").click();
         Browser.waitForElement(20,"//div[@class='search-form__scope-icon-shape']");
         Browser.find(How.XPATH,"//div[@class='search-form__scope-icon-shape']").click();
         Browser.waitForElement(20,"//div[@data-scope-code='uk']");
@@ -76,8 +76,8 @@ public class Functions_MobileSearch {
         Thread.sleep(5000);
     }
     public void searchMobileAu (String keyWord) throws InterruptedException {
-        Browser.elementToBeClickable(20,"//div[@class='search-segment']");
-        Browser.find(How.XPATH,"//div[@class='search-segment']").click();
+        Browser.elementToBeClickable(20,"//div[@class='header-main-bar static-search-bar']//*[@class='search-form__submit-btn']");
+        Browser.find(How.XPATH,"//div[@class='header-main-bar static-search-bar']//*[@class='search-form__submit-btn']").click();
         Browser.waitForElement(20,"//div[@class='search-form__scope-icon-shape']");
         Browser.find(How.XPATH,"//div[@class='search-form__scope-icon-shape']").click();
         Browser.waitForElement(20,"//div[@data-scope-code='au']");
@@ -87,8 +87,8 @@ public class Functions_MobileSearch {
         Thread.sleep(5000);
     }
     public void searchMobileStore (String keyWord) throws InterruptedException {
-        Browser.elementToBeClickable(20,"//div[@class='search-segment']");
-        Browser.find(How.XPATH,"//div[@class='search-segment']").click();
+        Browser.elementToBeClickable(20,"//div[@class='header-main-bar static-search-bar']//*[@class='search-form__submit-btn']");
+        Browser.find(How.XPATH,"//div[@class='header-main-bar static-search-bar']//*[@class='search-form__submit-btn']").click();
         Browser.waitForElement(20,"//div[@class='search-form__scope-icon-shape']");
         Browser.find(How.XPATH,"//div[@class='search-form__scope-icon-shape']").click();
         Browser.waitForElement(20,"//div[@data-scope-code='store']");

@@ -1,6 +1,8 @@
 package modules.Fado;
 
 import com.github.javafaker.Faker;
+import data.Data_Login;
+import libraries.Functions_Login;
 import libraries.Functions_MobileSearch;
 import libraries.Functions_Search;
 import org.testng.Assert;
@@ -9,29 +11,27 @@ import org.testng.annotations.*;
 import supports.Browser;
 
 public class Testing {
-    public Functions_MobileSearch test;
+    public Functions_Login test;
     Faker faker = new Faker();
 
     @BeforeMethod
-    public void setUp() throws InterruptedException {
-        test = new Functions_MobileSearch();
-        Browser.openMobile();
-        Browser.get("https://fado.vn/");
-        test.closePopup();
+    public void setUp(){
+        test = new Functions_Login();
+        Browser.open("chrome");
+        Browser.get("https://fado.vn/dang-nhap");
     }
 
-    @Test (invocationCount = 1, enabled = false)
-    public void TC01_searchMobile () throws InterruptedException {
-        test.searchMobile("tablet");
-        boolean isPresent = test.checkSearchMobile("all");
-        Assert.assertFalse(isPresent);
+    @Test (dataProvider = "data_login", dataProviderClass = Data_Login.class)
+    public void TC06_loginFailWrongUsername (String username, String password) {
+        test.login(username, password);
+        boolean isPresent = test.checkLoginFailWrongUsername();
+        Assert.assertTrue(isPresent);
     }
-
-    @Test (description = "search theo tên của item")
-    public void TC16_searchKeywordName () throws InterruptedException {
-        test.searchMobileStore("Apple MacBook Air (13-inch, 8GB RAM, 256GB Storage, 1.6GHz Intel Core i5) - Space Gray (Previous Model)");
-        boolean isPresent = test.checkSearchMobile("store");
-        Assert.assertFalse(isPresent);
+    @Test (dataProvider = "data_login", dataProviderClass = Data_Login.class)
+    public void TC07_loginFailWrongPassword (String username, String password) {
+        test.login(username, password);
+        boolean isPresent = test.checkLoginFailWrongPassword();
+        Assert.assertTrue(isPresent);
     }
 
     @AfterMethod
