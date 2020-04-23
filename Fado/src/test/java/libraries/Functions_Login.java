@@ -12,7 +12,7 @@ public class Functions_Login {
     }
 
     public boolean checkLoginSuccess () {
-        Browser.waitForElement(10,"//*[@class='user-name-col']");
+        Browser.waitForElement(20,"//*[@class='user-name-col']");
         return (Browser.findAll(How.XPATH, "//*[@class='user-name-col']").size()>0);
     }
     public boolean checkLoginFailNullData () {

@@ -17,20 +17,14 @@ public class Testing {
     @BeforeMethod
     public void setUp(){
         test = new Functions_Login();
-        Browser.open("chrome");
-        Browser.get("https://fado.vn/dang-nhap");
+        Browser.open("firefox");
+        Browser.get("http://staging-v2.fado.vn/dang-nhap");
     }
 
     @Test (dataProvider = "data_login", dataProviderClass = Data_Login.class)
-    public void TC06_loginFailWrongUsername (String username, String password) {
+    public void TC01_loginSuccess (String username, String password) {
         test.login(username, password);
-        boolean isPresent = test.checkLoginFailWrongUsername();
-        Assert.assertTrue(isPresent);
-    }
-    @Test (dataProvider = "data_login", dataProviderClass = Data_Login.class)
-    public void TC07_loginFailWrongPassword (String username, String password) {
-        test.login(username, password);
-        boolean isPresent = test.checkLoginFailWrongPassword();
+        boolean isPresent = test.checkLoginSuccess();
         Assert.assertTrue(isPresent);
     }
 

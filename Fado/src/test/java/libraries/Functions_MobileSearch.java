@@ -17,6 +17,10 @@ public class Functions_MobileSearch {
         if (isExisted("//div[@id='bner-center-modal']//button[@class='close-btn']")){
             Browser.find(How.XPATH,"//div[@id='bner-center-modal']//button[@class='close-btn']").click();
         }
+        // close popup dki nhan thong bao
+        if (isExisted("//div[@id='ins-editable-button-1580496456']")){
+            Browser.find(How.XPATH,"//div[@id='ins-editable-button-1580496456']").click();
+        }
         // close popup nhan diem
         //if (isExisted("//div[@id='regist-get-point-modal__form-block']/button[1]")){
         //    Browser.find(How.XPATH,"//div[@id='regist-get-point-modal__form-block']/button[1]").click();
