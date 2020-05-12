@@ -16,7 +16,8 @@ public class Login_Test {
     public void setUp(){
         test = new Functions_Login();
         Browser.open("chrome");
-        Browser.get("https://fado.vn/dang-nhap");
+        Browser.get("https://fado.vn/");
+        test.closePopup();
     }
 
     @Test (dataProvider = "data_login", dataProviderClass = Data_Login.class)

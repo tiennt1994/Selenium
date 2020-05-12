@@ -112,6 +112,9 @@ public class Browser {
     public static String getText(How how, String locator) {
         return find(how, locator).getText();
     }
+    public static Integer getNumber(How how, String locator) {
+        return Integer.valueOf(find(how, locator).getText());
+    }
 
     public static List<WebElement> findAll(How how, String locator) {
         return driver.findElements(how.buildBy(locator));

@@ -4,8 +4,34 @@ import org.openqa.selenium.support.How;
 import supports.Browser;
 
 public class Functions_Login {
+    public boolean isExisted (String x){
+        if (Browser.findAll(How.XPATH, x).size()>0) {
+            return true;
+        }
+        else return false;
+    }
+
+    public void closePopup () {
+        // click icon close banner quang cao
+        if (isExisted("//div[@id='bner-center-modal']//button[@class='close-btn']")){
+            Browser.find(How.XPATH,"//div[@id='bner-center-modal']//button[@class='close-btn']").click();
+        }
+        if (isExisted("//div[@id='bner-center-modal']//button[@class='close']")){
+            Browser.find(How.XPATH,"//div[@id='bner-center-modal']//button[@class='close']").click();
+        }
+        // close popup dki nhan thong bao
+        if (isExisted("//div[@id='ins-editable-button-1580496456']")){
+            Browser.find(How.XPATH,"//div[@id='ins-editable-button-1580496456']").click();
+        }
+        // close popup nhan diem
+        //if (isExisted("//div[@id='regist-get-point-modal__form-block']/button[1]")){
+        //    Browser.find(How.XPATH,"//div[@id='regist-get-point-modal__form-block']/button[1]").click();
+        //}
+    }
 
     public void login(String userName, String password) {
+        Browser.find(How.CLASS_NAME,"login-btn").click();
+        Browser.waitForElement(10,"//*[@name='email']");
         Browser.fill(How.NAME,"email", userName);
         Browser.fill(How.NAME,"password", password);
         Browser.find(How.XPATH, "//button[.='Đăng nhập']").click();

@@ -21,13 +21,13 @@ public class Order_Test {
         test_login = new Functions_Login();
         test_order = new Functions_Order();
         Browser.open("chrome");
-        Browser.get("http://guest:123@staging-v2.fado.vn/dang-nhap");
+        Browser.get("http://guest:123@staging-v2.fado.vn/");
     }
 
-    @Test (enabled = false)
+    @Test
     public void TC01_orderWithLogin () throws InterruptedException {
         test_login.login("tiennt@miczone.vn", "tien2653084");
-        // set dk login thanh cong moi navigate qa trang khac
+        // set dk login thanh cong moi navigate qua trang khac
         if (test_login.checkLoginSuccess()){
             Browser.navigate("http://staging-v2.fado.vn/us/amazon/hamile-airpods-case-protective-cover-front-led-visible-shockproof-soft-silicone-case-cover-skin-compatible-for-apple-airpods-2-1-with-keychain-lilac-B07T93ZS8Z.html");
             test_order.closePopup();
@@ -51,7 +51,7 @@ public class Order_Test {
     @AfterMethod
     public void tearDown(@org.jetbrains.annotations.NotNull ITestResult result) {
         if(!result.isSuccess()) {
-            //Browser.captureScreenshot();// capture screenshot when test failed
+            Browser.captureScreenshot();// capture screenshot when test failed
             String failUrl = Browser.getDriver().getCurrentUrl(); // print URL when test failed
             System.out.println("FAIL URL ='" + failUrl + "'");
         }
