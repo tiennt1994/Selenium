@@ -10,8 +10,8 @@ import org.testng.annotations.Test;
 import supports.Browser;
 
 public class AddToCart_Test {
-    public Functions_AddToCart test_add;
-    public Functions_Login test_login;
+    private Functions_AddToCart test_add;
+    private Functions_Login test_login;
 
     @BeforeMethod
     public void setUp(){
@@ -26,7 +26,7 @@ public class AddToCart_Test {
     @Test
     public void TC01_addCartWithoutLogin () throws InterruptedException {
         test_add.addToCart();
-        boolean isPresent = test_add.checkAddCartSuccess();
+        boolean isPresent = test_add.checkAddCartNewItem();
         Assert.assertTrue(isPresent);
     }
     @Test
@@ -35,12 +35,20 @@ public class AddToCart_Test {
         if (test_login.checkLoginSuccess()){
             test_add.closePopup();
             test_add.addToCart();
-            boolean isPresent = test_add.checkAddCartSuccess();
+            boolean isPresent = test_add.checkAddCartNewItem();
             Assert.assertTrue(isPresent);
         }
         else {
             System.out.println("login fail");
         }
+    }
+    @Test
+    public void TC03_addCartSameItem () throws InterruptedException {
+        test_add.addToCart();
+        Browser.navigate("https://fado.vn/us/amazon/k-kenzhou-computer-reading-glasses-blue-light-blocking-lightweight-glasses-for-women-2-packblackyellow-35-B07VK3S95P.html");
+        test_add.addToCart();
+        boolean isPresent = test_add.checkAddCartSameItem();
+        Assert.assertTrue(isPresent);
     }
 
     @AfterMethod

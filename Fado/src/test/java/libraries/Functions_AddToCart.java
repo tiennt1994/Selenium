@@ -48,9 +48,13 @@ public class Functions_AddToCart {
         Thread.sleep(3000);
     }
 
-    public boolean checkAddCartSuccess () {
-        //return ((Browser.findAll(How.XPATH,"//*[@class='cart-block__product-info-td']").size()>0)&&(Browser.getText(How.CLASS_NAME, "cart-btn__quantity").equals("1")));
+    public boolean checkAddCartNewItem () {
         int quantityAfter = Browser.getNumber(How.CLASS_NAME, "cart-btn__quantity");
-        return quantityAfter == i + 1;
+        return (quantityAfter == i+1 && Browser.findAll(How.CLASS_NAME,"cart-block__product-tr").size() == i+1);
+    }
+    public boolean checkAddCartSameItem () {
+        int quantityAfter = Browser.getNumber(How.CLASS_NAME, "cart-btn__quantity");
+        int amount = Integer.parseInt(Browser.find(How.CLASS_NAME,"my-quantity-control__input").getAttribute("value"));
+        return (quantityAfter == i+1 && amount == i+1);
     }
 }

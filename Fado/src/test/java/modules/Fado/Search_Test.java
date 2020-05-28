@@ -74,7 +74,7 @@ public class Search_Test {
     //search theo keyword
     @Test
     public void TC09_searchKeywordAll () throws InterruptedException {
-        test.search("tablet");
+        test.search("áo thun");
         boolean isPresent = test.checkSearch("all");
         Assert.assertFalse(isPresent);
     }

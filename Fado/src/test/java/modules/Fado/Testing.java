@@ -13,8 +13,8 @@ import org.testng.annotations.*;
 import supports.Browser;
 
 public class Testing {
-    public Functions_AddToCart test_add;
-    public Functions_Login test_login;
+    private Functions_AddToCart test_add;
+    private Functions_Login test_login;
     Faker faker = new Faker();
 
     @BeforeMethod
@@ -29,16 +29,11 @@ public class Testing {
 
     @Test
     public void TC02_addCartWithLogin () throws InterruptedException {
-        test_login.login("tiennt@miczone.vn", "tien2653084");
-        if (test_login.checkLoginSuccess()){
-            test_add.closePopup();
-            test_add.addToCart();
-            boolean isPresent = test_add.checkAddCartSuccess();
-            Assert.assertTrue(isPresent);
-        }
-        else {
-            System.out.println("login fail");
-        }
+        test_add.addToCart();
+        Browser.navigate("https://fado.vn/us/amazon/k-kenzhou-computer-reading-glasses-blue-light-blocking-lightweight-glasses-for-women-2-packblackyellow-35-B07VK3S95P.html");
+        test_add.addToCart();
+        boolean isPresent = test_add.checkAddCartSameItem();
+        Assert.assertTrue(isPresent);
     }
 
     @AfterMethod

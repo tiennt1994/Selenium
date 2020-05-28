@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import supports.Browser;
 
 public class Login_Test {
-    public Functions_Login test;
+    private Functions_Login test;
 
     @BeforeMethod
     public void setUp(){
