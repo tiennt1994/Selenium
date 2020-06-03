@@ -15,6 +15,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 
 import java.io.File;
 import java.io.IOException;
@@ -144,10 +145,14 @@ public class Browser {
         wait.until(ExpectedConditions.visibilityOfElementLocated
                 (By.xpath(waitConditionLocator)));
     }
-
     public static void elementToBeClickable(int seconds, String waitConditionLocator) {
         WebDriverWait wait = new WebDriverWait(driver, seconds);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(waitConditionLocator)));
+    }
+
+    public static void scrollByElement (How how, String locator){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", driver.findElement(how.buildBy(locator)));
     }
 
     public static void close(){

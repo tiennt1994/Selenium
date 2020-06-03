@@ -37,7 +37,8 @@ public class Functions_Order {
         Browser.find(How.XPATH, "//div[@class='product-detail-block__col-2']//*[@class='mz-btn__label-col']").click();
         Browser.waitForElement(10,"//*[@class='my-btn -btn-pill -btn-grd-bg order-step-1-block__submit-vat-form']");
         Browser.find(How.XPATH, "//*[@class='my-btn -btn-pill -btn-grd-bg order-step-1-block__submit-vat-form']").click();
-        Browser.waitForElement(10,"//*[@class='check-control margin--bottom-15px']//div[@class='check-control__check-icon']");
+        Thread.sleep(3000);
+        //Browser.waitForElement(10,"//*[@class='check-control margin--bottom-15px']//div[@class='check-control__check-icon']");
         Browser.find(How.XPATH, "//*[@class='check-control margin--bottom-15px']//div[@class='check-control__check-icon']").click();
         Browser.waitForElement(10,"//*[@class='my-btn -btn -btn-pill -btn-grd-bg margin--left-10px']");
         Browser.find(How.XPATH, "//*[@class='my-btn -btn -btn-pill -btn-grd-bg margin--left-10px']").click();
@@ -61,7 +62,34 @@ public class Functions_Order {
         dropWard.selectByValue("10200");
         Browser.fill(How.NAME, "buyer_address","21b");
         Browser.find(How.XPATH, "//*[@class='my-btn -btn-pill -btn-grd-bg order-step-1-block__submit-vat-form']").click();
-        Browser.waitForElement(10,"//*[@class='check-control margin--bottom-15px']//div[@class='check-control__check-icon']");
+        Thread.sleep(3000);
+        //Browser.waitForElement(10,"//*[@class='check-control margin--bottom-15px']//div[@class='check-control__check-icon']");
+        Browser.find(How.XPATH, "//*[@class='check-control margin--bottom-15px']//div[@class='check-control__check-icon']").click();
+        Browser.waitForElement(10,"//*[@class='my-btn -btn -btn-pill -btn-grd-bg margin--left-10px']");
+        Browser.find(How.XPATH, "//*[@class='my-btn -btn -btn-pill -btn-grd-bg margin--left-10px']").click();
+        Browser.find(How.XPATH, "//*[@class='my-btn -btn-pill -btn-grd-bg']").click();
+        Thread.sleep(5000);
+    }
+    public void orderAddCart () throws InterruptedException {
+        Browser.scrollByElement(How.XPATH,"//*[@class='cart-block__control-th']");
+        Browser.elementToBeClickable(10,"//*[@class='my-btn -btn-pill -btn-grd-bg']");
+        Browser.find(How.XPATH,"//*[@class='my-btn -btn-pill -btn-grd-bg']").click();
+        Browser.waitForElement(10,"//*[@name='buyer_fullname']");
+        Browser.fill(How.NAME, "buyer_fullname","Auto Test");
+        Browser.fill(How.NAME, "buyer_phone","1234567890");
+        Browser.fill(How.NAME, "buyer_email","tiennumber2@gmail.com");
+        Select dropCity = new Select(Browser.find(How.NAME,"buyer_city_id"));
+        dropCity.selectByVisibleText("Hồ Chí Minh");
+        Browser.elementToBeClickable(10,"//*[@name='buyer_district_id']");
+        Select dropDistrict = new Select(Browser.find(How.NAME,"buyer_district_id"));
+        dropDistrict.selectByValue("640");
+        Browser.elementToBeClickable(10,"//*[@name='buyer_ward_id']");
+        Select dropWard = new Select(Browser.find(How.NAME,"buyer_ward_id"));
+        dropWard.selectByValue("10200");
+        Browser.fill(How.NAME, "buyer_address","21b");
+        Browser.find(How.XPATH, "//*[@class='my-btn -btn-pill -btn-grd-bg order-step-1-block__submit-vat-form']").click();
+        Thread.sleep(3000);
+        //Browser.waitForElement(10,"//*[@class='check-control margin--bottom-15px']//div[@class='check-control__check-icon']");
         Browser.find(How.XPATH, "//*[@class='check-control margin--bottom-15px']//div[@class='check-control__check-icon']").click();
         Browser.waitForElement(10,"//*[@class='my-btn -btn -btn-pill -btn-grd-bg margin--left-10px']");
         Browser.find(How.XPATH, "//*[@class='my-btn -btn -btn-pill -btn-grd-bg margin--left-10px']").click();
