@@ -25,16 +25,15 @@ public class Order_Test {
         test_add = new Functions_AddToCart();
         Browser.open("chrome");
         Browser.maximize();
-        Browser.get("http://guest:123@staging-v2.fado.vn/");
+        Browser.get("http://guest:123@staging-v2.fado.vn/us/amazon/hamile-airpods-case-protective-cover-front-led-visible-shockproof-soft-silicone-case-cover-skin-compatible-for-apple-airpods-2-1-with-keychain-lilac-B07T93ZS8Z.html");
         test_order.closePopup();
     }
 
     @Test
     public void TC01_orderWithLogin () throws InterruptedException {
-        test_login.login("tiennt@miczone.vn", "tien2653084");
+        test_login.login("tiennt@miczone.vn", "tiennumber1");
         // set dk login thanh cong moi navigate qua trang khac
         if (test_login.checkLoginSuccess()){
-            Browser.navigate("http://staging-v2.fado.vn/us/amazon/hamile-airpods-case-protective-cover-front-led-visible-shockproof-soft-silicone-case-cover-skin-compatible-for-apple-airpods-2-1-with-keychain-lilac-B07T93ZS8Z.html");
             test_order.closePopup();
             test_order.orderWithLogin();
             boolean isPresent = test_order.checkOrderSuccess();
@@ -46,16 +45,12 @@ public class Order_Test {
     }
     @Test
     public void TC02_orderWithoutLogin () throws InterruptedException {
-        Browser.navigate("http://staging-v2.fado.vn/us/amazon/hamile-airpods-case-protective-cover-front-led-visible-shockproof-soft-silicone-case-cover-skin-compatible-for-apple-airpods-2-1-with-keychain-lilac-B07T93ZS8Z.html");
-        test_order.closePopup();
         test_order.orderWithoutLogin();
         boolean isPresent = test_order.checkOrderSuccess();
         Assert.assertTrue(isPresent);
     }
     @Test (description = "add cart truoc roi moi checkout")
     public void TC03_orderAddCart () throws InterruptedException {
-        Browser.navigate("http://staging-v2.fado.vn/us/amazon/hamile-airpods-case-protective-cover-front-led-visible-shockproof-soft-silicone-case-cover-skin-compatible-for-apple-airpods-2-1-with-keychain-lilac-B07T93ZS8Z.html");
-        test_order.closePopup();
         test_add.addToCart();
         test_order.orderAddCart();
         boolean isPresent = test_order.checkOrderSuccess();

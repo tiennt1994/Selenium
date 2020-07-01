@@ -31,7 +31,7 @@ public class AddToCart_Test {
     }
     @Test
     public void TC02_addCartWithLogin () throws InterruptedException {
-        test_login.login("tiennt@miczone.vn", "tien2653084");
+        test_login.login("tiennt@miczone.vn", "tiennumber1");
         if (test_login.checkLoginSuccess()){
             test_add.closePopup();
             test_add.addToCart();
