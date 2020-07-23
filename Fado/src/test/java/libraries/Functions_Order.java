@@ -33,8 +33,8 @@ public class Functions_Order {
     }
 
     public void orderWithLogin () throws InterruptedException {
-        Browser.elementToBeClickable(10,"//div[@class='product-detail-block__col-2']//*[@class='mz-btn__label-col']");
-        Browser.find(How.XPATH, "//div[@class='product-detail-block__col-2']//*[@class='mz-btn__label-col']").click();
+        Browser.elementToBeClickable(10,"//button[@class='buy-now-btn mz-grd-btn mz-grd-btn-danger mz-grd-btn-bdr-round']");
+        Browser.find(How.XPATH, "//button[@class='buy-now-btn mz-grd-btn mz-grd-btn-danger mz-grd-btn-bdr-round']").click();
         Browser.waitForElement(10,"//*[@class='my-btn -btn-pill -btn-grd-bg order-step-1-block__submit-vat-form']");
         Browser.find(How.XPATH, "//*[@class='my-btn -btn-pill -btn-grd-bg order-step-1-block__submit-vat-form']").click();
         Browser.elementToBeClickable(10,"//*[@class='my-btn -btn-pill -btn-grd-bg']");
@@ -45,8 +45,8 @@ public class Functions_Order {
         Thread.sleep(5000);
     }
     public void orderWithoutLogin () throws InterruptedException {
-        Browser.elementToBeClickable(10,"//div[@class='product-detail-block__col-2']//*[@class='mz-btn__label-col']");
-        Browser.find(How.XPATH, "//div[@class='product-detail-block__col-2']//*[@class='mz-btn__label-col']").click();
+        Browser.elementToBeClickable(10,"//button[@class='buy-now-btn mz-grd-btn mz-grd-btn-danger mz-grd-btn-bdr-round']");
+        Browser.find(How.XPATH, "//button[@class='buy-now-btn mz-grd-btn mz-grd-btn-danger mz-grd-btn-bdr-round']").click();
         Browser.waitForElement(10,"//*[@name='buyer_fullname']");
         Browser.fill(How.NAME, "buyer_fullname","Auto Test");
         Browser.fill(How.NAME, "buyer_phone","1234567890");

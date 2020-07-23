@@ -29,19 +29,9 @@ public class Testing {
     }
 
     @Test
-    public void TC01_orderWithLogin () throws InterruptedException {
-        test_login.login("tiennt@miczone.vn", "tien2653084");
-        // set dk login thanh cong moi navigate qua trang khac
-        if (test_login.checkLoginSuccess()){
-            Browser.navigate("http://staging-v2.fado.vn/us/amazon/hamile-airpods-case-protective-cover-front-led-visible-shockproof-soft-silicone-case-cover-skin-compatible-for-apple-airpods-2-1-with-keychain-lilac-B07T93ZS8Z.html");
-            test_order.closePopup();
-            test_order.orderWithLogin();
-            boolean isPresent = test_order.checkOrderSuccess();
-            Assert.assertTrue(isPresent);
-        }
-        else {
-            System.out.println("login fail");
-        }
+    public void TC03_orderAddCart () throws InterruptedException {
+        Browser.multipleClick(How.XPATH,"//div[@class='mz-container']/div[@id='product-detail-block']/div[@class='product-detail-block__col-2']/div[@class='cart-segment']/div[@class='quantity-control-group']/button[@class='up-btn']",2);
+        Thread.sleep(3000);
     }
 
     @AfterMethod

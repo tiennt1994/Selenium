@@ -41,8 +41,8 @@ public class Functions_AddToCart {
             i = Integer.parseInt(quantityBefore);
         }
         else i = Integer.parseInt(quantityBefore);
-        Browser.elementToBeClickable(10,"//div[@class='product-detail-block__col-2']//*[@class='mz-grd-btn__label-col']");
-        Browser.find(How.XPATH,"//div[@class='product-detail-block__col-2']//*[@class='mz-grd-btn__label-col']").click();
+        Browser.elementToBeClickable(10,"//button[@class='add-cart-btn mz-btn mz-btn-outline-primary mz-grd-btn-lg mz-btn-bdr-round']");
+        Browser.find(How.XPATH,"//button[@class='add-cart-btn mz-btn mz-btn-outline-primary mz-grd-btn-lg mz-btn-bdr-round']").click();
         Browser.waitForElement(10,"//*[@class='mz-btn__label-col'][contains(text(),'Xem giỏ hàng và thanh toán')]");
         Browser.find(How.XPATH,"//*[@class='mz-btn__label-col'][contains(text(),'Xem giỏ hàng và thanh toán')]").click();
         Thread.sleep(3000);

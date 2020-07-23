@@ -155,6 +155,12 @@ public class Browser {
         js.executeScript("arguments[0].scrollIntoView();", driver.findElement(how.buildBy(locator)));
     }
 
+    public static void multipleClick (How how, String locator, int time){
+        for (int i = 0; i < time; i++){
+            find(how, locator).click();
+        }
+    }
+
     public static void close(){
         if (driver != null){
             driver.quit();

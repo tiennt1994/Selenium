@@ -32,7 +32,6 @@ public class Order_Test {
     @Test
     public void TC01_orderWithLogin () throws InterruptedException {
         test_login.login("tiennt@miczone.vn", "tiennumber1");
-        // set dk login thanh cong moi navigate qua trang khac
         if (test_login.checkLoginSuccess()){
             test_order.closePopup();
             test_order.orderWithLogin();
