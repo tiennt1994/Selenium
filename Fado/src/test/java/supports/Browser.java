@@ -19,6 +19,8 @@ import org.openqa.selenium.JavascriptExecutor;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -131,13 +133,20 @@ public class Browser {
         hover.moveToElement(find(how, locator)).perform();
     }
 
-    public static void captureScreenshot(){
+    public static void captureScreenshot(String filename){
+        long time = System.currentTimeMillis();
+        String fileName = filename + "-" + getTimeInFormat(time) + ".png";
         File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(screenshot, new File("./target/screenshot/screenshot-"+System.currentTimeMillis()+".png"));
+            FileUtils.copyFile(screenshot, new File("./target/screenshot/screenshot-"+fileName));
         } catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    public static String getTimeInFormat(long time) {
+        return new SimpleDateFormat
+                ("dd-MM-yyyy_HH.mm.ss").format(new Date());
     }
 
     public static void waitForElement(int seconds, String waitConditionLocator){

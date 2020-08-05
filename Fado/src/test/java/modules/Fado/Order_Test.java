@@ -34,7 +34,7 @@ public class Order_Test {
         test_login.login("tiennt@miczone.vn", "tiennumber1");
         if (test_login.checkLoginSuccess()){
             test_order.closePopup();
-            test_order.orderWithLogin();
+            test_order.orderWithLogin("van phong");
             boolean isPresent = test_order.checkOrderSuccess();
             Assert.assertTrue(isPresent);
         }
@@ -59,7 +59,7 @@ public class Order_Test {
     @AfterMethod
     public void tearDown(@org.jetbrains.annotations.NotNull ITestResult result) {
         if(!result.isSuccess()) {
-            Browser.captureScreenshot();// capture screenshot when test failed
+            Browser.captureScreenshot(result.getName());// capture screenshot when test failed
             String failUrl = Browser.getDriver().getCurrentUrl(); // print URL when test failed
             System.out.println("FAIL URL ='" + failUrl + "'");
         }

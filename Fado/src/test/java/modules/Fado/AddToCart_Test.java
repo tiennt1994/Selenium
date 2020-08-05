@@ -54,7 +54,7 @@ public class AddToCart_Test {
     @AfterMethod
     public void tearDown(@org.jetbrains.annotations.NotNull ITestResult result) {
         if(!result.isSuccess()) {
-            Browser.captureScreenshot();// capture screenshot when test failed
+            Browser.captureScreenshot(result.getName());// capture screenshot when test failed
             String failUrl = Browser.getDriver().getCurrentUrl(); // print URL when test failed
             System.out.println("FAIL URL ='" + failUrl + "'");
         }

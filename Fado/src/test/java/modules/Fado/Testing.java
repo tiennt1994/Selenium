@@ -29,15 +29,23 @@ public class Testing {
     }
 
     @Test
-    public void TC03_orderAddCart () throws InterruptedException {
-        Browser.multipleClick(How.XPATH,"//div[@class='mz-container']/div[@id='product-detail-block']/div[@class='product-detail-block__col-2']/div[@class='cart-segment']/div[@class='quantity-control-group']/button[@class='up-btn']",2);
-        Thread.sleep(3000);
+    public void TC01_orderWithLogin () throws InterruptedException {
+        test_login.login("tiennt@miczone.vn", "tiennumber1");
+        if (test_login.checkLoginSuccess()){
+            test_order.closePopup();
+            test_order.orderWithLogin("nha");
+            boolean isPresent = test_order.checkOrderSuccess();
+            Assert.assertTrue(isPresent);
+        }
+        else {
+            System.out.println("login fail");
+        }
     }
 
     @AfterMethod
     public void tearDown(@org.jetbrains.annotations.NotNull ITestResult result) {
         if(!result.isSuccess()) {
-            //Browser.captureScreenshot(); // capture screenshot when test failed
+            Browser.captureScreenshot(result.getName()); // capture screenshot when test failed
             String failUrl = Browser.getDriver().getCurrentUrl();
             System.out.println("FAIL URL ='" + failUrl + "'");
         }

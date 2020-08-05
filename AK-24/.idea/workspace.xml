@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="692246a2-2f3a-48e4-b3e2-5a8afeee3c11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Fado/src/test/java/modules/Fado/MobileSearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/libraries/Functions_Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/src/test/java/libraries/Functions_Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Fado/Order_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/src/test/java/modules/Fado/Order_Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Fado/src/test/java/modules/Fado/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/src/test/java/modules/Fado/Testing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/libraries/Functions_Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/target/test-classes/libraries/Functions_Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Fado/Order_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Fado/Order_Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Fado/Testing.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/target/test-classes/modules/Fado/Testing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fado/target/test-classes/supports/Browser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fado/target/test-classes/supports/Browser.class" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,15 +33,12 @@
     <option name="WARN_ABOUT_CRLF" value="false" />
     <option name="WARN_ABOUT_DETACHED_HEAD" value="false" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1TgO3gVDfCeCgJDnrgdw3KI0hkE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -63,18 +64,6 @@
       <recent name="C:\Users\Tien\IdeaProjects\AK-24\driver" />
       <recent name="C:\Users\Tien\IdeaProjects\AK-24" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="TestNG.TodoMVCTest">
     <configuration name="C:/Users/Tien/GitHub/Selenium/AK-24/src/test/java/configuration/bmi-test.xml" type="TestNG" temporary="true" nameIsGenerated="true">
@@ -239,12 +228,11 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

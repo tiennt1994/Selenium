@@ -1,5 +1,14 @@
 package libraries;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.How;
 import supports.Browser;
 import org.openqa.selenium.support.ui.Select;
@@ -32,11 +41,13 @@ public class Functions_Order {
         //}
     }
 
-    public void orderWithLogin () throws InterruptedException {
+    public void orderWithLogin (String method) throws InterruptedException {
         Browser.elementToBeClickable(10,"//button[@class='buy-now-btn mz-grd-btn mz-grd-btn-danger mz-grd-btn-bdr-round']");
         Browser.find(How.XPATH, "//button[@class='buy-now-btn mz-grd-btn mz-grd-btn-danger mz-grd-btn-bdr-round']").click();
         Browser.waitForElement(10,"//*[@class='my-btn -btn-pill -btn-grd-bg order-step-1-block__submit-vat-form']");
         Browser.find(How.XPATH, "//*[@class='my-btn -btn-pill -btn-grd-bg order-step-1-block__submit-vat-form']").click();
+        Thread.sleep(3000);
+        selectPaymentMethod(method);
         Browser.elementToBeClickable(10,"//*[@class='my-btn -btn-pill -btn-grd-bg']");
         Browser.find(How.XPATH, "//*[@class='my-btn -btn-pill -btn-grd-bg']").click();
         Browser.waitForElement(10,"//*[@class='my-btn -btn -btn-pill -btn-grd-bg margin--left-10px']");
@@ -92,6 +103,34 @@ public class Functions_Order {
         Browser.find(How.XPATH, "//*[@class='my-btn -btn -btn-pill -btn-grd-bg margin--left-10px']").click();
         Browser.find(How.XPATH, "//*[@class='my-btn -btn-pill -btn-grd-bg']").click();
         Thread.sleep(5000);
+    }
+
+    public void selectPaymentMethod (String method) {
+        switch (method.toLowerCase()) {
+            case "fadopay":
+                Browser.find(How.XPATH,"//div[contains(text(),'Tài khoản trả trước')]").click();
+            case "chuyen khoan":
+                Browser.find(How.XPATH,"//div[contains(text(),'Chuyển khoản')]").click();
+            case "ATM":
+                Browser.find(How.XPATH,"//div[contains(text(),'ATM')]").click();
+            case "the tin dung":
+                Browser.find(How.XPATH,"//div[contains(text(),'Thẻ tín dụng')]").click();
+            case "zalopay":
+                Browser.find(How.XPATH,"//div[contains(text(),'ZaloPay')]").click();
+            case "van phong":
+                Browser.find(How.XPATH,"//div[contains(text(),'Văn phòng')]").click();
+            case "nha":
+                Browser.scrollByElement(How.XPATH,"//i[@class='svg -svg-32px -svg-payment-home']");
+                Browser.find(How.XPATH,"//i[@class='svg -svg-32px -svg-payment-home']").click();
+            case "cua hang":
+                Browser.scrollByElement(How.XPATH,"//div[contains(text(),'cửa hàng')]");
+                Browser.find(How.XPATH,"//div[contains(text(),'cửa hàng')]").click();
+            case "COD":
+                Browser.find(How.XPATH,"//div[contains(text(),'COD')]").click();
+
+            default:
+                throw new IllegalStateException("Khong co phuong thuc thanh toan nay");
+        }
     }
 
     public boolean checkOrderSuccess () {
