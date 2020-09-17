@@ -73,7 +73,7 @@ public class Browser {
         mobileEmulation.put("deviceName", "iPhone X");
 
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--disable-notifications");// close notification cua trình duyệt
+        chromeOptions.addArguments("--disable-notifications");// close notification of browser
         chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
 
         driver = new ChromeDriver(chromeOptions);

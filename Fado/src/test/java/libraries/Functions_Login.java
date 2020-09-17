@@ -29,16 +29,16 @@ public class Functions_Login {
         //}
     }
 
-    public void login(String userName, String password) {
+    public void login(String username, String password) {
         Browser.find(How.CLASS_NAME,"login-btn").click();
         Browser.waitForElement(10,"//*[@name='email']");
-        Browser.fill(How.NAME,"email", userName);
+        Browser.fill(How.NAME,"email", username);
         Browser.fill(How.NAME,"password", password);
         Browser.find(How.XPATH, "//button[.='Đăng nhập']").click();
     }
 
     public boolean checkLoginSuccess () {
-        Browser.waitForElement(20,"//*[@class='user-name-col']");
+        Browser.waitForElement(10,"//*[@class='user-name-col']");
         return (Browser.findAll(How.XPATH, "//*[@class='user-name-col']").size()>0);
     }
     public boolean checkLoginFailNullData () {

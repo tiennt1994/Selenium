@@ -48,6 +48,7 @@ public class Functions_Order {
         Browser.find(How.XPATH, "//*[@class='my-btn -btn-pill -btn-grd-bg order-step-1-block__submit-vat-form']").click();
         Thread.sleep(3000);
         selectPaymentMethod(method);
+        Thread.sleep(5000);
         Browser.elementToBeClickable(10,"//*[@class='my-btn -btn-pill -btn-grd-bg']");
         Browser.find(How.XPATH, "//*[@class='my-btn -btn-pill -btn-grd-bg']").click();
         Browser.waitForElement(10,"//*[@class='my-btn -btn -btn-pill -btn-grd-bg margin--left-10px']");
