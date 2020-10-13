@@ -1,7 +1,7 @@
 package modules;
 
 import libraries.Function_Login;
-import org.openqa.selenium.Alert;
+import libraries.Function_Order;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -9,22 +9,25 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import supports.Browser;
 
-public class Test1 {
-    private Function_Login test;
+public class Order_Test {
+    private Function_Order test_order;
+    private Function_Login test_login;
 
     @BeforeMethod
     public void setUp() throws InterruptedException {
-        test = new Function_Login();
+        test_order = new Function_Order();
+        test_login = new Function_Login();
         Browser.open("chrome");
         Browser.maximize();
-        Browser.get("https://tiki.vn/");
-        test.closePopup();
+        Browser.get("https://tiki.vn/usb-kingston-dt100g3-32gb-usb-3-0-hang-chinh-hang-p405243.html?src=search&2hi=0&keyword=usb");
+        //test_login.closePopup();
     }
 
     @Test
-    public void TC01_loginSuccess () throws InterruptedException {
-        test.login("tiennumber1@gmail.com","tien2653084");
-        boolean isPresent = test.checkLoginSuccess();
+    public void TC01_addCart () throws InterruptedException {
+        test_order.addCart();
+        Thread.sleep(3000);
+        boolean isPresent = test_order.checkAddCartSuccess();
         Assert.assertTrue(isPresent);
     }
 
