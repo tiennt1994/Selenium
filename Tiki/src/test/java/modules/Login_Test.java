@@ -21,9 +21,15 @@ public class Login_Test {
         test.closePopup();
     }
 
-    @Test
+    @Test (enabled = false)
     public void TC01_loginSuccess () throws InterruptedException {
         test.login("tiennumber1@gmail.com","tien2653084");
+        boolean isPresent = test.checkLoginSuccess();
+        Assert.assertTrue(isPresent);
+    }
+    @Test
+    public void TC02_loginGoogle () throws InterruptedException {
+        test.loginGoogle("tiennumber1@gmail.com","TungTung0912");
         boolean isPresent = test.checkLoginSuccess();
         Assert.assertTrue(isPresent);
     }

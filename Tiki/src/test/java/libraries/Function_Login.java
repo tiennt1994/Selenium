@@ -3,6 +3,9 @@ package libraries;
 import org.openqa.selenium.support.How;
 import supports.Browser;
 
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
 public class Function_Login {
     public boolean isExisted (String x){
         if (Browser.findAll(How.XPATH, x).size()>0) {
@@ -27,7 +30,26 @@ public class Function_Login {
         Browser.fill(How.XPATH,"//input[@id='email']",username);
         Browser.fill(How.XPATH,"//input[@id='password']",password);
         Browser.find(How.XPATH,"//*[@class='UserModalstyle__RightButton-tngk37-8 GBpke']").click();
-        Thread.sleep(5000);
+        Thread.sleep(4000);
+    }
+    public void loginGoogle (String username, String password) throws InterruptedException {
+        Browser.hover(How.XPATH,"//*[@class='Userstyle__NoWrap-sc-6e6am-11 cbYxcp']");
+        Browser.find(How.XPATH,"//*[@class='Userstyle__UserDropDownButton-sc-6e6am-10 fpkFKZ']").click();
+        Thread.sleep(2000);
+        Set<String> AllWindowHandles = Browser.getDriver().getWindowHandles();
+        String window1 = (String) AllWindowHandles.toArray()[0];
+        System.out.print("window1 handle code = "+AllWindowHandles.toArray()[0]);
+        String window2 = (String) AllWindowHandles.toArray()[1];
+        System.out.print("\nwindow2 handle code = "+AllWindowHandles.toArray()[1]);
+        Browser.getDriver().switchTo().window(window2);
+        Browser.waitForElement(5,"//input[@type='email']");
+        Browser.fill(How.XPATH,"//input[@type='email']",username);
+        Browser.find(How.XPATH,"//div[@class='VfPpkd-RLmnJb']").click();
+        Browser.waitForElement(5,"//input[@type='password']");
+        Browser.fill(How.XPATH,"//input[@type='password']",password);
+        Browser.find(How.XPATH,"//div[@class='VfPpkd-RLmnJb']").click();
+        Thread.sleep(7000);
+        Browser.getDriver().switchTo().window(window1);
     }
 
     public boolean checkLoginSuccess () {
