@@ -43,9 +43,8 @@ public class Order_Test {
         }
         System.out.println("login fail");
     }
-
     @Test (enabled = false)
-    public void TC02_removeCart () throws InterruptedException {
+    public void TC03_removeCart () throws InterruptedException {
         test_order.addCart();
         Browser.find(How.XPATH,"//span[@class='cart-products__del']").click();
         Thread.sleep(2000);
