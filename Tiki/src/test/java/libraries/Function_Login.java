@@ -4,7 +4,6 @@ import org.openqa.selenium.support.How;
 import supports.Browser;
 
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 public class Function_Login {
     public boolean isExisted (String x){
@@ -16,7 +15,7 @@ public class Function_Login {
 
     public void closePopup () throws InterruptedException {
         // click icon close popup quang cao
-        Browser.waitForElement(10,"//*[@id='onesignal-slidedown-cancel-button']");
+        Browser.waitForElement(15,"//*[@id='onesignal-slidedown-cancel-button']");
         if (isExisted("//*[@id='onesignal-slidedown-cancel-button']")){
             Browser.find(How.XPATH,"//*[@id='onesignal-slidedown-cancel-button']").click();
         }
@@ -52,7 +51,7 @@ public class Function_Login {
         Browser.getDriver().switchTo().window(window1);
     }
     public void loginFacebook (String username, String password) throws InterruptedException {
-        Browser.hover(How.XPATH,"//*[@class='Userstyle__NoWrap-sc-6e6am-11 cbYxcp']");
+        Browser.hover(How.XPATH,"//*[@class='account-label']");
         Browser.find(How.XPATH,"//*[@class='Userstyle__UserDropDownButton-sc-6e6am-10 eqGBml']").click();
         Thread.sleep(2000);
         Set<String> AllWindowHandles = Browser.getDriver().getWindowHandles();
@@ -70,7 +69,7 @@ public class Function_Login {
     }
 
     public boolean checkLoginSuccess () {
-        return (Browser.findAll(How.XPATH, "//*[@class='Userstyle__NoWrap-sc-6e6am-11 cbYxcp'][contains(text(),'Chào')]").size()>0);
+        return (Browser.findAll(How.XPATH, "//*[@class='Userstyle__NoWrap-sc-6e6am-11 gtVgrD']").size()>0);
     }
     public boolean checkLoginFail () {
         return (Browser.findAll(How.XPATH, "//*[@class='InputError-bdny64-0 gySywm']").size()>0);

@@ -1,7 +1,6 @@
 package modules;
 
 import libraries.Function_Login;
-import org.openqa.selenium.Alert;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
