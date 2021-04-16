@@ -23,16 +23,17 @@ public class Function_Login {
     }
 
     public void login (String username, String password) throws InterruptedException {
-        Browser.hover(How.XPATH,"//*[@class='Userstyle__NoWrap-sc-6e6am-11 cbYxcp']");
+        Browser.hover(How.XPATH,"//*[@class='account-label']");
         Browser.find(How.XPATH,"//*[@class='Userstyle__UserDropDownButton-sc-6e6am-10 dYkBsI'][contains(text(),'Đăng nhập')]").click();
-        Browser.waitForElement(5,"//input[@id='email']");
-        Browser.fill(How.XPATH,"//input[@id='email']",username);
-        Browser.fill(How.XPATH,"//input[@id='password']",password);
-        Browser.find(How.XPATH,"//*[@class='UserModalstyle__RightButton-tngk37-8 GBpke']").click();
-        Thread.sleep(4000);
+        Browser.find(How.XPATH,"//*[@class='login-with-email']").click();
+        Browser.waitForElement(5,"//input[@type='email']");
+        Browser.fill(How.XPATH,"//input[@type='email']",username);
+        Browser.fill(How.XPATH,"//input[@type='password']",password);
+        Browser.find(How.XPATH,"//div[@class='styles__StyledLoginWithEmail-sc-1okp99d-0 iuEbzU']/form/button").click();
+        Thread.sleep(3000);
     }
     public void loginGoogle (String username, String password) throws InterruptedException {
-        Browser.hover(How.XPATH,"//*[@class='Userstyle__NoWrap-sc-6e6am-11 cbYxcp']");
+        Browser.hover(How.XPATH,"//*[@class='account-label']");
         Browser.find(How.XPATH,"//*[@class='Userstyle__UserDropDownButton-sc-6e6am-10 fpkFKZ']").click();
         Thread.sleep(2000);
         Set<String> AllWindowHandles = Browser.getDriver().getWindowHandles();
@@ -47,7 +48,7 @@ public class Function_Login {
         Browser.waitForElement(5,"//input[@type='password']");
         Browser.fill(How.XPATH,"//input[@type='password']",password);
         Browser.find(How.XPATH,"//div[@class='VfPpkd-RLmnJb']").click();
-        Thread.sleep(7000);
+        Thread.sleep(6000);
         Browser.getDriver().switchTo().window(window1);
     }
     public void loginFacebook (String username, String password) throws InterruptedException {
@@ -64,12 +65,12 @@ public class Function_Login {
         Browser.fill(How.XPATH,"//input[@id='email']",username);
         Browser.fill(How.XPATH,"//input[@type='password']",password);
         Browser.find(How.XPATH,"//input[@name='login']").click();
-        Thread.sleep(7000);
+        Thread.sleep(6000);
         Browser.getDriver().switchTo().window(window1);
     }
 
     public boolean checkLoginSuccess () {
-        return (Browser.findAll(How.XPATH, "//*[@class='Userstyle__NoWrap-sc-6e6am-11 gtVgrD']").size()>0);
+        return (Browser.findAll(How.XPATH, "//*[@class='Userstyle__NoWrap-sc-6e6am-11 gtVgrD'][contains(text(),'Tài Khoản')]").size()>0);
     }
     public boolean checkLoginFail () {
         return (Browser.findAll(How.XPATH, "//*[@class='InputError-bdny64-0 gySywm']").size()>0);
