@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Selenium.iml" filepath="$PROJECT_DIR$/.idea/Selenium.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tiki/Tiki.iml" filepath="$PROJECT_DIR$/Tiki/Tiki.iml" />
     </modules>
   </component>
 </project>
